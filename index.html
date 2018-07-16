@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<main class="page-content">
+	{% for post in site.posts %}
+    <article class="post excerpt">
+			<header>
+				<h2>
+					<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+				</h2>
+			</header>
+			<section class="excerpt">
+				{{ post.excerpt }}
+			</section>
+			<p class="read-more">
+				<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">READ MORE</a> 
+				<span class="minutes">
+					<i class="far fa-clock"></i> 
+					{% assign words = post.content | number_of_words %}
+				  {% if words < 360 %}
+				    1 minute
+				  {% else %}
+				    {{ words | divided_by:180 }} minutes
+				  {% endif %}
+				</span>.
+			</p>
+			<footer>
+				<p class="post-meta">
+		      <time datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+		      <span>{{ post.categories }}</span>
+		      <!--<span><a href="#">DOCS</a>, <a href="#">Help</a></span>-->
+		    </p>
+			</footer>
+		</article>
+  {% endfor %}
+</main>

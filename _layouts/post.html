@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<main class="page-content">
+	<article class="post">
+		<p class="post-meta">
+	    <time datetime="{{ page.date }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+	    <span>{{ page.categories }}</span>
+	    <span class="minutes right">
+				<i class="far fa-clock"></i> 
+				{% assign words = page.content | number_of_words %}
+			  {% if words < 360 %}
+			    1 minute read
+			  {% else %}
+			    {{ words | divided_by:180 }} minutes read
+			  {% endif %}
+			</span>.
+	  </p>
+		<h1 class="post-title">{{ page.title }}</h1>
+		{{ page.content }}
+	</article>
+</main>

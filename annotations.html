@@ -1,0 +1,19 @@
+---
+layout: default
+title: Annotations
+permalink: /annotations/
+---
+
+<main class="page-content">
+	<h1>My personal annotations for every learning path I follow</h1>
+	<section class="annotations">
+		{% for annotation in site.annotations %}
+			<article>
+				<a href="{{ annotation.url | prepend: site.baseurl }}" title="{{ annotation.title }}">
+					<img src="{{ annotation.img }}" alt="{{ annotation.title }}">
+					<h2>{{ annotation.title }}</h2>
+				</a>
+			</article>
+		{% endfor %}
+	</section>
+</main>

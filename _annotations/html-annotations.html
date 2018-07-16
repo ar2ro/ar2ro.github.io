@@ -1,0 +1,198 @@
+---
+layout: default
+title: "HTML annotations"
+img: "https://res.cloudinary.com/ar2ro/image/upload/v1531744035/ar2.ro/html.jpg"
+---
+
+<main class="page-content">
+	<h1>HTML annotations</h1>
+	<h2>The <i>lang</i> global attribute:</h2>
+	<p>
+		Helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user.
+	</p>
+	<p>
+		A language tag is made of hyphen-separated language subtags, where each subtag indicates a certain property of the language. The 3 most common subtags are:
+		<dl>
+			<dt>Language subtag</dt>
+			<dd>Required. A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is en, and the code for Badeshi is bdz.</dd>
+			<dt>Script subtag</dt>
+			<dd>Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is fr-Brail and ja-Kana is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.</dd>
+			<dt>Region subtag</dt>
+			<dd>Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, es-ES is for Spanish as spoken in Spain, and es-013 is Spanish as spoken in Central America. “International Spanish” would just be es.</dd>
+		</dl>
+	</p>
+	<p>
+		To find the correct subtags visit:
+		<ul>
+			<li><a href="https://r12a.github.io/app-subtags/" title="Language subtags">https://r12a.github.io/app-subtags/</a></li>
+			<li><a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" title="Language subtags">http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a></li>
+		</ul>
+	</p>
+	<p>
+		For the CSS pseudo-class <code>:lang</code>, two invalid language names are different if their names are different. So while <code>:lang(es)</code> matches both <code>lang="es-ES"</code> and <code>lang="es-419"</code>, <code>:lang(xyzzy)</code> would not match <code>lang="xyzzy-Zorp!"</code>.
+	</p>
+	<p>
+		You should keep the tag as short as possible. For instance, use ja for Japanese and not ja-JP, unless there is a particular reason that you need to say that this is Japanese as spoken in Japan, rather than elsewhere.
+	</p>
+	<p>
+		Detailed spec: <a href="https://www.w3.org/International/articles/language-tags/" title="Language tag spec">https://www.w3.org/International/articles/language-tags/</a>
+	</p>
+
+	<hr>
+
+	<h2>The <i>title</i> global attribute:</h2>
+	<p>
+		Contains text representing advisory information, related to the element it belongs to. Some typical uses:
+		<ul>
+			<li>Labeling <code>&lt;iframe&gt;</code> elements.</li>
+			<li>Providing an inline programmatically associated label for an <code>&lt;input&gt;</code> element.</li>
+			<li>Labeling controls in data tables.</li>
+		</ul>
+	</p>
+	<p>
+		If this attribute is omitted, it means that the title of the nearest ancestor of this element is still relevant (and could be used as the tooltip for that element). If this attribute is set to the empty string, it explicitly means its nearest ancestor's title is not relevant (and shouldn't be used in the tooltip for this element).
+	</p>
+	<p>
+		Additional semantics are attached to the title attributes of the <code>&lt;link&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;input&gt;</code> and <code>&lt;menuitem&gt;</code> elements.
+	</p>
+	<p>
+		<b>note:</b> Find the referenced elements to know about the additional semantics
+	</p>
+	<p>
+		It's a good idea to add title to links, is intended to contain supplementary useful information about the link, such as what kind of information the page contains, or things to be aware of. It's also a good idea to add titles to images.
+	</p>
+	<p>
+		<strong>TIP:</strong> You can quite happily have two index.html files in one project as long as they are in different locations in the filesystem. Many web sites do. The second index.html would perhaps be the main landing page for project-related information.
+	</p>
+
+	<hr>
+
+	<h2>The <i>download</i> attribute:</h2>
+	<p>
+		When you are linking to a resource that is to be downloaded rather than opened in the browser, you can use the download attribute to provide a default save filename. Here's an example with a download link to the latest Windows version of Firefox:
+		
+{% highlight html %}<a  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+		download="firefox-latest-64bit-installer.exe">
+  Download Latest Firefox for Windows (64-bit) (English, US)
+</a>{% endhighlight %}
+	</p>
+
+	<hr>
+
+	<h2>E-mail links</h2>
+	<p>
+		In its most basic and commonly used form, a mailto: link simply indicates the email address of the intended recipient. For example: <code>&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</code>
+	</p>
+	<p>
+		In fact, the email address is even optional. If you leave it out (that is, your href is simply "mailto:"), a new outgoing email window will be opened by the user's mail client that has no destination address specified yet.
+	</p>
+	<p>
+		In addition to the email address, you can provide other information. In fact, any standard mail header fields can be added to the mailto URL you provide. The most commonly used of these are "subject", "cc", and "body" (which is not a true header field, but allows you to specify a short content message for the new email). Each field and its value is specified as a query term.
+	</p>
+	<p>
+		Here's an example that includes a cc, bcc, subject and body:
+{% highlight html %}<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+  Send mail with cc, bcc, subject and body
+</a>{% endhighlight %}
+	</pre>
+	</p>
+	<p>
+		The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces percent-escaped(https://en.wikipedia.org/wiki/Percent-encoding). Also note the use of the question mark (?) to separate the main URL from the field values, and ampersands (&) to separate each field in the mailto: URL. This is standard URL query notation. Read The GET method(https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) to understand what URL query notation is more comonly used for. You can specify multiple addresses.
+	</p>
+	<p>
+		<b>TIP:</b> The <code>&lt;blockquote&gt;</code> and <code>&lt;q&gt;</code> elements must have a <code>cite</code> attribute with an URL pointing to the source of the quote. There is no way to get the browser to display the contents of cite, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page, a better way to mark it up is put the <code>&lt;cite&gt;</code> element next to (or inside) the quote element. This is really meant to contain the name of the quote source — i.e. the name of the book, or name of the person that said the quote — but there is no reason why you couldn't link the text inside <code>&lt;cite&gt;</code> to the quote source in some way:
+{% highlight html %}<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+	<cite>MDN blockquote page</cite></a>:
+</p>{% endhighlight %}
+	</p>
+	
+	<hr>
+
+	<h2>The <i>address</i> element:</h2>
+	<p>
+		It simply wraps around your contact details, for example:
+{% highlight html %}<address>
+  <p>Chris Mills, Manchester, The Grim North, UK</p>
+</address>{% endhighlight %}
+	</p>
+	<p>
+		One thing to remember however is that the <code>&lt;address&gt;</code> element is meant for marking up the contact details of the person who wrote the HTML document, not any address. So the above would only be ok if Chris had written the document the markup appears on. Note that something like this would also be ok:
+{% highlight html %}<address>
+  <p>Page written by <a href="../authors/chris-mills/">Chris Mills</a>.</p>
+</address>{% endhighlight %}
+	</p>
+
+	<hr>
+
+	<h2>Representing computer code:</h2>
+	<p>
+		<ul>
+			<li>
+				<code>&lt;code&gt;</code>: For marking up generic pieces of computer code.
+			</li>
+			<li>
+				<code>&lt;pre&gt;</code>: For retaining whitespace (generally code blocks)
+			</li>
+			<li>
+				<code>&lt;var&gt;</code>: For specifically marking up variable names.
+			</li>
+			<li>
+				<code>&lt;kbd&gt;</code>: For marking up keyboard (and other types of) input entered into the computer.
+			</li>
+			<li>
+				<code>&lt;samp&gt;</code>: For marking up the output of a computer program.
+			</li>
+		</ul>
+		Example: 
+{% highlight html %}<pre><code>var para = document.querySelector('p');
+
+para.onclick = function() {
+  alert('Owww, stop poking me!');
+}</code></pre>
+
+<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+
+<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+
+
+<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+
+<pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>{% endhighlight %}
+	</p>
+	
+	<hr>
+
+	<h2>Times and dates:</h2>
+	<p>
+		HTML also provides the <code>&lt;time&gt;</code> element for marking up times and dates in a machine-readable format. For example: <code>&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;</code>
+	</p>
+	<p>
+		There are many different ways that humans write down dates. But these different forms cannot be easily recognised by the computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The <time> element allows you to attach an unambiguous, machine-readable time/date for this purpose.  for example:
+		<dl>
+			<dt>Standard simple date</dt>
+			<dd><code>&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;</code></dd>
+			<dt>Just year and month</dt>
+			<dd><code>&lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;</code></dd>
+			<dt>Just month and day</dt>
+			<dd><code>&lt;time datetime="01-20"&gt;20 January&lt;/time&gt;</code></dd>
+			<dt>Just time, hours and minutes</dt>
+			<dd><code>&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;</code></dd>
+			<dt>You can do seconds and milliseconds too!</dt>
+			<dd><code>&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;</code></dd>
+			<dt>Date and time</dt>
+			<dd><code>&lt;time datetime="2016-01-20T19:30"&gt;7.30pm, 20 January 2016&lt;/time&gt;</code></dd>
+			<dt>Date and time with timezone offset</dt>
+			<dd><code>&lt;time datetime="2016-01-20T19:30+01:00"&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/time&gt;</code></dd>
+			<dt>Calling out a specific week number</dt>
+			<dd><code>&lt;time datetime="2016-W04"&gt;The fourth week of 2016&lt;/time&gt;</code></dd>
+		</dl>
+	</p>
+	<p>
+		Extended elements reference: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" title="Extended elements reference">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a>
+	</p>
+	<p>
+		HTML layout elements in more detail: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#HTML_layout_elements_in_more_detail" title="HTML layout elements in more detail">https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#HTML_layout_elements_in_more_detail</a>
+	</p>
+</main>
