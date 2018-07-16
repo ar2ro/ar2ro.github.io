@@ -224,6 +224,9 @@ pre, code {
 		}
 		.excerpt {
 			grid-row: 3 / 4;
+			h2 {
+				margin-bottom: 0;
+			}
 			p:last-of-type {
 				margin-bottom: 0;
 			}
