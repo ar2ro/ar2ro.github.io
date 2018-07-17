@@ -33,9 +33,6 @@ h1 {
 h2 {
 	font-size: 1.36rem;
 }
-p, dd, li {
-	text-align: justify;
-}
 dt {
 	font-weight: 600;
 	margin: 10px 0 5px;
@@ -100,6 +97,9 @@ pre, code {
 		.small {
 			font-size: 0.9em;
 		}
+	}
+	.presentation {
+		text-align: left;
 	}
 	.social {
 		text-align: center;
@@ -261,6 +261,10 @@ pre, code {
 	body {
 		//grid-template-columns: 30px 25vw auto 30px;
 		grid-template-rows: repeat(3, auto);
+		grid-template-columns: 5vw 25vw auto 5vw;
+	}
+	h1 {
+		font-size: 1.5rem;
 	}
 	.site-header {
 		position: initial;
