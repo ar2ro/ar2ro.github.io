@@ -1,19 +1,22 @@
 <header class="site-header">
-	<address>
-		<a href="/">
-			<img src="https://res.cloudinary.com/ar2ro/image/upload/v1531743964/ar2.ro/logo.png" title="Arturo Montero" alt="Arturo Montero" class="logo">
-			<div class="info">
-				<h1 class="name">Arturo Montero</h1>
-				<div class="nickname">ar2ro | <span class="small">Hobbyist Developer</span></div>
-			</div>
-		</a>
-		<hr>
-		<p class="presentation">I'm a hobbyist developer pursuing a career change at 32<abbr title="years old">yo</abbr>. I'll start by relearning the fundamentals of HTML, CSS, JavaScript and moving to more advanced topics afterwards in the hope of landing a developer job.</p>
-		<p class="social">
-			<a href="https://twitter.com/ar2royv" title="Arturo's Twitter profile"><i class="fab fa-twitter"></i></a>
-			<a href="https://github.com/ar2ro" title="Arturo's GitHub profile"><i class="fab fa-github"></i></a>
-			<a href="mailto:arturo@ar2.ro" title="Send me an email"><i class="far fa-envelope"></i></a>
-			<a href="https://steemit.com/@ar2ro" title="Arturo's Steemit profile"><img src="https://res.cloudinary.com/ar2ro/image/upload/v1531743963/ar2.ro/steemit.png" alt="steemit"></a>
-		</p>
-	</address>
+	<div class="header-content">
+		{% if page.name == 'index.html' %}
+			<h1 class="name">Arturo Montero</h1>
+		{% else %}
+			<h2 class="name">Arturo Montero</h2>
+		{% endif %}
+		<address>
+			<a href="/" class="details">
+				<img src="https://res.cloudinary.com/ar2ro/image/upload/v1531743964/ar2.ro/logo.png" title="Arturo Montero" alt="Arturo Montero" class="logo">
+				<div class="nickname">ar2ro - <span class="small">Hobbyist Developer</span></div>
+			</a>
+			<p class="presentation">I'm a hobbyist developer pursuing a career change at 32<abbr title="years old">yo</abbr>. I'll start by relearning the fundamentals of HTML, CSS, JavaScript and moving to more advanced topics afterwards in the hope of landing a developer job.</p>
+			<p class="social">
+				<a href="https://twitter.com/ar2royv" title="Arturo's Twitter profile"><i class="fab fa-twitter"></i></a>
+				<a href="https://github.com/ar2ro" title="Arturo's GitHub profile"><i class="fab fa-github"></i></a>
+				<a href="mailto:arturo@ar2.ro" title="Send me an email"><i class="far fa-envelope"></i></a>
+				<a href="https://steemit.com/@ar2ro" title="Arturo's Steemit profile"><img src="https://res.cloudinary.com/ar2ro/image/upload/v1531743963/ar2.ro/steemit.png" alt="steemit"></a>
+			</p>
+		</address>
+	</div>
 </header>

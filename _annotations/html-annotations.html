@@ -1,41 +1,43 @@
 ---
-layout: default
+layout: page
 title: "HTML annotations"
 img: "https://res.cloudinary.com/ar2ro/image/upload/v1531744035/ar2.ro/html.jpg"
+menu: annotations
 ---
 
-<main class="page-content annotations">
+
 	<h1>HTML annotations</h1>
 
-	<nav>
-		<ul>
-			<li><a href="#elements">Elements</a></li>
-			<li><a href="#attributes">Attributes</a></li>
-			<li><a href="#tools">Tools / References</a></li>
-		</ul>
-	</nav>
+	<ul>
+		<li><a href="#elements">Elements</a></li>
+		<li><a href="#attributes">Attributes</a></li>
+		<li><a href="#tools">Tools / References</a></li>
+	</ul>
 
 <!-- Elements -->
 	<h2 id="elements">Elements</h2>
 	
 	<article>
-		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">&lt;meta&gt;</a></h3>
-		<p>Placed inside the head, it's used to add metadata (data that describes data) to a document.</p>
-		<p>The <code>&lt;meta charset="utf-8"&gt;</code> specifies the character set that the document is permited to use (utf-8 includes pretty much any character from any human language) and it should always be used.</p>
+		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">&lt;meta&gt;</a></h3>
+		<p>
+			Placed inside the head, it's used to add metadata (data that describes data) to a document.
+		</p>
+		<p>
+			The <code>&lt;meta charset="utf-8"&gt;</code> specifies the character set that the document is permited to use (utf-8 includes pretty much any character from any human language) and it should always be used.
+		</p>
 		<p>
 			There are many other variations of the <code>&lt;meta&gt;</code> element available and they commonly include <code>name</code> and <code>content</code> attributes:
-			<ul>
-				<li><code>name</code> specifies the type of meta element it is, what type of information it contains.</li>
-				<li><code>content</code> specifies the actual meta content.</li>
-			</ul>
+		</p>
+		<ul>
+			<li><code>name</code> specifies the type of meta element it is, what type of information it contains.</li>
+			<li><code>content</code> specifies the actual meta content.</li>
+		</ul>
+		<p>
 			Example: <code>&lt;meta name="author" content="Chris Mills"&gt;</code>
 		</p>
-		<p>There are other types of metadata which are propietary creations like facebook's <a href="http://ogp.me/" target="_blank">Open Graph Data</a> or <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html">Twitter's cards</a>. These are used to provide these websites with specific pieces of information they can use</p>
-	</article>
-
-	<article>
-		<h3><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_custom_icons_to_your_site" target=_blank>Icons</a></h3>
-		<p>You can add references to custom icons in your metadata and these will be displayed in certain contexts, example: providing a nice high resolution icon to use when the website is saved to an iPad's home screen.</p><p> Icons must be saved in the same directory as the site's index page in <code>.ico</code> format and is added to the head with the <code>link</code> element: <code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</code></p>
+		<p>
+			There are other types of metadata which are propietary creations like facebook's <a href="http://ogp.me/">Open Graph Data</a> or <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html">Twitter's cards</a>. These are used to provide these websites with specific pieces of information they can use
+		</p>
 	</article>
 
 	<article>
@@ -43,31 +45,37 @@ img: "https://res.cloudinary.com/ar2ro/image/upload/v1531744035/ar2.ro/html.jpg"
 		<p>
 			These came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all.
 		</p>
-		<p>HTML5 redefined <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, and <code>&lt;u&gt;</code> with new, somewhat confusing, semantic roles.</p>
+		<p>
+			HTML5 redefined <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, and <code>&lt;u&gt;</code> with new, somewhat confusing, semantic roles.
+		</p>
 	</article>
 
-	<article>
+	<article id="cite-element">
 		<h3>&lt;cite&gt;</h3>
 		<p>
 			It's used to describe a reference  to a quotation. As the <code>cite</code> attribute is not displayed by the browser, is common to use the <code>&lt;cite&gt;</code> element next to or inside the quote element and link the quote's reference to the text inside the <code>&lt;cite&gt;</code> element:
-			<p data-height="265" data-theme-id="0" data-slug-hash="oMzjyb" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="HTML Quote cites." class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/oMzjyb/">HTML Quote cites.</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 		</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="oMzjyb" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="HTML Quote cites." class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/oMzjyb/">HTML Quote cites.</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 	</article>
 
 	<article>
-		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address" target="_blank">&lt;address&gt;</a></h3>
+		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address">&lt;address&gt;</a></h3>
 		<p>
 			It simply wraps around your contact details, for example:
-{% highlight html %}<address>
-  <p>Chris Mills, Manchester, The Grim North, UK</p>
-</address>{% endhighlight %}
 		</p>
+
+{% highlight html %}<address>
+	<p>Chris Mills, Manchester, The Grim North, UK</p>
+</address>{% endhighlight %}
+
 		<p>
 			One thing to remember however is that the <code>&lt;address&gt;</code> element is meant for marking up the contact details of the person who wrote the HTML document, not any address. So the above would only be ok if Chris had written the document the markup appears on. Note that something like this would also be ok:
+		</p>
+
 {% highlight html %}<address>
   <p>Page written by <a href="../authors/chris-mills/">Chris Mills</a>.</p>
 </address>{% endhighlight %}
-		</p>
+
 	</article>
 
 	<article>
@@ -93,120 +101,443 @@ img: "https://res.cloudinary.com/ar2ro/image/upload/v1531744035/ar2.ro/html.jpg"
 	</article>
 
 	<article>
-		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time" target="_blank">&lt;time&gt;</a></h3>
+		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">&lt;time&gt;</a></h3>
 		<p>
 			It's used for marking up times and dates in a machine-readable format. For example: <code>&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;</code>
 		</p>
 		<p>
-			There are many different ways that humans write down dates. But these different forms cannot be easily recognised by the computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The <time> element allows you to attach an unambiguous, machine-readable time/date for this purpose.  for example:
-			<dl>
-				<dt>Standard simple date</dt>
-				<dd><code>&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;</code></dd>
-				<dt>Just year and month</dt>
-				<dd><code>&lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;</code></dd>
-				<dt>Just month and day</dt>
-				<dd><code>&lt;time datetime="01-20"&gt;20 January&lt;/time&gt;</code></dd>
-				<dt>Just time, hours and minutes</dt>
-				<dd><code>&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;</code></dd>
-				<dt>You can do seconds and milliseconds too!</dt>
-				<dd><code>&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;</code></dd>
-				<dt>Date and time</dt>
-				<dd><code>&lt;time datetime="2016-01-20T19:30"&gt;7.30pm, 20 January 2016&lt;/time&gt;</code></dd>
-				<dt>Date and time with timezone offset</dt>
-				<dd><code>&lt;time datetime="2016-01-20T19:30+01:00"&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/time&gt;</code></dd>
-				<dt>Calling out a specific week number</dt>
-				<dd><code>&lt;time datetime="2016-W04"&gt;The fourth week of 2016&lt;/time&gt;</code></dd>
-			</dl>
+			There are many different ways that humans write down dates. But these different forms cannot be easily recognised by the computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The <code>&lt;time&gt;</code> element allows you to attach an unambiguous, machine-readable time/date for this purpose.  for example:
+		</p>
+		<dl>
+			<dt>Standard simple date</dt>
+			<dd><code>&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;</code></dd>
+			<dt>Just year and month</dt>
+			<dd><code>&lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;</code></dd>
+			<dt>Just month and day</dt>
+			<dd><code>&lt;time datetime="01-20"&gt;20 January&lt;/time&gt;</code></dd>
+			<dt>Just time, hours and minutes</dt>
+			<dd><code>&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;</code></dd>
+			<dt>You can do seconds and milliseconds too!</dt>
+			<dd><code>&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;</code></dd>
+			<dt>Date and time</dt>
+			<dd><code>&lt;time datetime="2016-01-20T19:30"&gt;7.30pm, 20 January 2016&lt;/time&gt;</code></dd>
+			<dt>Date and time with timezone offset</dt>
+			<dd><code>&lt;time datetime="2016-01-20T19:30+01:00"&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/time&gt;</code></dd>
+			<dt>Calling out a specific week number</dt>
+			<dd><code>&lt;time datetime="2016-W04"&gt;The fourth week of 2016&lt;/time&gt;</code></dd>
+		</dl>
+	</article>
+
+	<article>
+		<h3>Semantic layout elements</h3>
+		<dl>
+			<dt><code>&lt;main&gt;</code></dt>
+			<dd>Represents content unique to the page. It must be used only once per page and nested directly inside the <code>&lt;body&gt;</code></dd>
+			<dt><code>&lt;article&gt;</code></dt>
+			<dd>Encloses a block of related content that makes sense on its own without the rest of the page</dd>
+			<dt><code>&lt;section&gt;</code></dt>
+			<dd>Similar to <code>&lt;article&gt;</code> but its more for grouping a single part of the page that constitutes one single piece of functionality (e.g. a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a heading (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>...). You can place diferent sections inside articles or different articles inside sections</dd>
+			<dt><code>&lt;aside&gt;</code></dt>
+			<dd>Contents contet that isn't directly related to the main content but can provide additional information indirectly related to it (glossary, entries, author bio, related links etc)</dd>
+			<dt><code>&lt;header&gt;</code></dt>
+			<dd>Represents a group of introductory content. If it's a child of the body, it defines the global header of a webpage, if it's a child of an article or section it defines a specific header for that section.</dd>
+			<dt><code>&lt;nav&gt;</code></dt>
+			<dd>Contains the main navigation for the page, secondary links would not go here.</dd>
+			<dt><code>&lt;footer&gt;</code></dt>
+			<dd>Represents a group of end content for a page.</dd>
+		</dl>
+		<p>
+			<span class="bold">Tip:</span> Consider a shopping cart widget that you could choose to pull up at any point. It isn't really an <code>&lt;aside&gt;</code> as it doesn't necessarily relate to the main content of the page. It doesn't even particularly warrant using a <code>&lt;section&gt;</code> as it isn't part of the main content of the page, so in this case we would use the non semantic <code>&lt;div&gt;</code> element.
 		</p>
 	</article>
 
+	<article>
+		<h3>&lt;hr&gt;</h3>
+		<p>
+			This creates a horizontal rule that denotes <strong>a thematic change</strong> in the text (such as a change on topic or scene)
+		</p>
+	</article>
+
+	<article>
+		<h3>&lt;figure&gt; and &lt;figcaption&gt;</h3>
+		<p>
+			These provides a semantic container for figures and clearly link figures to their captions. Captions and <code>alt</code> text shouldn't just say the same thing because they both appear when the image is gone.
+		</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="qyaxKM" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="figure and figcaptions" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/qyaxKM/">figure and figcaptions</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</article>
+
+	<article>
+		<h3>&lt;video&gt;</h3>
+		<p data-height="265" data-theme-id="0" data-slug-hash="bjBrKm" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="Video element" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/bjBrKm/">Video element</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<p>
+			In its simplest form the video element receives the <code>src</code> attribute, which acts in the same way as it does for the <code>&lt;img&gt;</code> element, and a boolean <code>controls</code> attribute which includes the browser's own control interface, this must always be included to give users at least a way to start and stop the media. The paragraph inside the <code>&lt;video&gt;</code> is the <strong>fallback content</strong> and will be displayed if the browser doesn't support the <code>&lt;video&gt;</code> element.
+		</p>
+		<p>
+			Different browsers support different video and audio formats so you should at least provide video sources in mp4(IE and Safari) and webm(Firefox and Chrome) formats, to do this you remove the <code>src</code> attribute and place each video source like a stand alone element inside the <code>&lt;video&gt;</code> element. Example:
+		</p>
+
+{% highlight html %}<source src="rabbit320.mp4" type="video/mp4">
+<source src="rabbit320.webm" type="video/webm">{% endhighlight %}
+		
+		<p>
+			Other attributes of the <code>&lt;video&gt;</code> element are <code>width</code> and <code>height</code> (video will maintain its aspect radio by growing horizontally and filling vertical space with a background color.), <code>autoplay</code>, <code>loop</code>, <code>mute</code> (the sound will be off by default but user can change it), <code>poster</code> (displays an image before the video is played), <code>preload</code> (used for buffering large files, it can take one of 3 values: <code>none</code>, <code>auto</code>, and <code>metadata</code>).
+		</p>
+		<p>
+			<span class="bold">Tip:</span> The <code>&lt;audio&gt;</code> element works exactly as the <code>&lt;video&gt;</code> element, it just doesn't support <code>width</code>, <code>height</code> and <code>poster</code> attributes.
+		</p>
+
+		<h4>Display Video Text Tracks</h4>
+		<p>
+			WebVTT is a format for writing text files containing multiple strings of text along with metadata such as what time in the video you want each text string to be displayed, and even limited styling/positioning information. These text strings are called cues, and you can display different types for different purposes, the most common being:
+		</p>
+		<dl>
+			<dt>subtitles</dt>
+			<dd>Translations of foreign material, for people who don't understand the words spoken in the audio.</dd>
+			<dt>captions</dt>
+			<dd>Synchronized transcriptions of dialog or descriptions of significant sounds, to let people who can't hear the audio understand what is going on.</dd>
+			<dt>timed descriptions</dt>
+			<dd>Text for conversion into audio, to serve people with visual impairments.</dd>
+		</dl>
+
+{% highlight html %}WEBVTT
+
+1
+00:00:22.230 --> 00:00:24.606
+This is the first subtitle.
+
+2
+00:00:30.739 --> 00:00:34.074
+This is the second.
+
+  ...{% endhighlight %}
+
+		<p>
+			This file needs to be saved in <code>.vtt</code> format and linked within the <code>&lt;track&gt;</code> element which should be placed inside <code>&lt;video&gt;</code> or <code>&lt;audio&gt;</code> elements. Use the <code>kind</code> attribute to specify whether the cues are subtitles, captions, or descriptions. Further, use <code>srclang</code> to tell the browser what language you have written the subtitles in. Example:
+		</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="jpVGab" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="Video tracks" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/jpVGab/">Video tracks</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<h4>See also</h4>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video delivery</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio and Video manipulation</a></li>
+			<li><a href="http://www.inwhatlanguage.com/blog/translate-video-audio/">Automated options to translate multimedia.</a></li>
+		</ul>
+	</article>
+
+	<article>
+		<h3>Displaying SVG</h3>
+		<p>
+			You can use the <code>&lt;img&gt;</code> element but be aware that you cannot manipulate the image with JS, external stylesheets wont take effect, and you cannot style the images with CSS pseudoclasses:
+		</p>
+
+{% highlight html %}<img 
+  src="equilateral.svg" 
+  alt="triangle with all three sides equal"
+  height="87px"
+  width="100px" />{% endhighlight %}
+		
+		<p>
+  		For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your src attribute and use a srcset attribute (which only recent browsers recognize) to reference the SVG.
+		</p>
+
+{% highlight html %}<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">{% endhighlight %}
+
+		<p>
+			You can also use SVGs as CSS background images but then the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations. If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers">article will point you in the right direction</a>.
+		</p>
+		<h4>Using the <code>&lt;svg&gt;</code> element:</h4>
+		<p>
+			You can put the SVG inline:
+		</p>
+
+{% highlight html %}<svg width="300" height="200">
+  <rect width="100%" height="100%" fill="green" />
+</svg>{% endhighlight %}	
+		
+		<p>
+			Inlining SVG saves an HTTP request, and therefore can reduce your loading. You can also use classes and ids for styling. In fact, you can use any <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute#Presentation_attributes">SVG presentation attribute</a> as a CSS property.	
+		</p>
+		<p>
+			As a downside, this method is only suitable if you're using the SVG in only one place as duplication makes for resource-intensive maintenance. Extra SVG code may increase the size of your HTML. The browser cannot cache SVG as it does with regular images.
+		</p>
+	</article>
+
+	<article>
+		<h3>Responsive images</h3>
+		<p>
+			There are two approaches for creating responsive images: <strong>Resolution switching</strong> and <strong>Art direction</strong>.
+		</p>
+		<h4>Resolution switching: Different sizes</h4>
+		<p>
+			With <strong>resolution switching (different sizes)</strong> we'll display identical image content, just larger or smaller depending on the device. We can use the <code>srcset</code> and <code>sizes</code> to provide several additional source images along with hints to help the browser pick the right one.
+		</p>
+
+{% highlight html %}
+<img srcset="elva-fairy-320w.jpg 320w,
+						 elva-fairy-480w.jpg 480w,
+						 elva-fairy-800w.jpg 800w"
+		 sizes="(max-width: 320px) 280px,
+						(max-width: 480px) 440px,
+      			800px"
+     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">{% endhighlight %}
+
+    <dl>
+     	<dt><code>srcset</code></dt>
+     	<dd>
+     		Defines the set of images we will allow the browser to choose between. For each image we write:
+     		<ol>
+     			<li>An image filename (<code>elva-fairy-320w.jpg</code>)</li>
+     			<li>The image's inherent width in pixels (<code>320w</code>). This is the image's real size.</li>
+     		</ol>
+     	</dd>
+     	<dt><code>sizes</code></dt>
+     	<dd>
+     		Defines a set of media conditions (screen widths) and indicates what image size would be best to choose, when certain media conditions are true. For each media condition we write:
+     		<ol>
+     			<li>A media condition (<code>(max-width: 320px)</code>).</li>
+     			<li>The width of the slot the image will fill when the media condition is true (<code>280px</code>). For the slot width you may provide an absolute length (<code>px</code>, <code>em</code>) or a length relative to the viewport (<code>vw</code>) but not percentages. The last slot which has no media condition is the default that is chosen when none of the media conditions are true. <span class="bold">Note:</span> The browser ignores everything after the first matching condition.</li>
+     		</ol>
+     	</dd>
+     </dl>
+    
+    <p>
+     	So, with these attributes in place, the browser will:
+    </p>
+			<ol>
+				<li>Look at its device width.</li>
+				<li>Work out which media condition in the sizes list is the first one to be true.</li>
+				<li>Look at the slot size given to that media query.</li>
+				<li>Load the image referenced in the srcset list that most closely matches the chosen slot size.</li>				
+			</ol>
+		<p>
+			Older browsers that don't support these features will just ignore them and load the image referenced in the <code>src</code> attribute.
+    </p>
+    <p>
+     	<strong>Tip:</strong> In the <code>&lt;head&gt;</code> you should place <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>, this forces mobile browsers to adopt their real viewport width for loading web pages (some mobile browsers lie about their viewport width, and instead load pages at a larger viewport width, then shrink the loaded page down)
+    </p>
+    <h4>Resolution switching: Same size, different resolutions</h4>
+    <p>
+    	If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on screen, you can allow the browser to choose an appropiate resolution image by using <code>srcset</code> with x-descriptions and without <code>sizes</code>:
+    </p>
+
+{% highlight html %}
+<img srcset="elva-fairy-320w.jpg,
+             elva-fairy-480w.jpg 1.5x,
+             elva-fairy-640w.jpg 2x"
+     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">{% endhighlight %}
+
+    <p>
+    	In this case, sizes is not needed — the browser simply works out what resolution the display is that it is being shown on, and serves the most appropriate image referenced in the srcset. So if the device accessing the page has a standard/low resolution display, with one device pixel representing each CSS pixel, the elva-fairy-320w.jpg image will be loaded (the 1x is implied, so you don't need to include it.) If the device has a high resolution of two device pixels per CSS pixel or more, the elva-fairy-640w.jpg image will be loaded.
+    </p>
+    <h4>Art direction</h4>
+    <p>
+    	With this approach we change the image displayed to suit different image display sizes. For example, if a large landscape shot with a person in the middle is shown on a website when viewed on a desktop browser, then shrunk down when the website is viewed on a mobile browser, it will look bad as the person will be really tiny and hard to see. It would probably be better to show a smaller, portrait image on mobile, which shows the person zoomed in. 
+    </p>
+    <p>
+    	For this, we use the <code>&lt;picture&gt;</code> element, containing several <code>&lt;source&gt;</code> elements that provide several different sources for the browser to choose between, followed by the all-important <code>&lt;img&gt;</code> element:
+    </p>
+
+{% highlight html %}<picture>
+  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+  <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+  <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+</picture>{% endhighlight %}
+		
+		<p>
+			Note that <code>&lt;source&gt;</code> can take a <code>srcset</code> attribute with multiple images referenced, and a <code>sizes</code> attribute too. So you could offer multiple images via a <code>&lt;picture&gt;</code> element, but then also offer multiple resolutions of each one too. Realistically, you probably won't want to do this kind of thing very often.
+    </p>
+    <p>
+    	<strong>Tip:</strong> You should use the media attribute only in art direction scenarios; when you do use media, don't also offer media conditions within the sizes attribute.
+    </p>
+    <h4>Modern image formats</h4>
+    <p>
+    	There are several exciting new image formats (such as WebP and JPEG-2000) that can maintain a low file size and high quality at the same time. However, browser support is spotty.
+    </p>
+    <p>
+    	<code>&lt;picture&gt;</code> lets us continue catering to older browsers. You can supply MIME types inside type attributes so the browser can immediately reject unsupported file types:
+    </p>
+
+{% highlight html %}<picture>
+  <source type="image/svg+xml" srcset="pyramid.svg">
+  <source type="image/webp" srcset="pyramid.webp"> 
+  <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles">
+</picture>{% endhighlight %}
+
+		<ul>
+			<li>Do not use the media attribute, unless you also need art direction.</li>
+			<li>In a <code>&lt;source&gt;</code> element, you can only refer to images of the type declared in type.</li>
+			<li>As before, you're welcome to use comma-separated lists with srcset and sizes, as needed.</li>
+		</ul>
+	</article>
+
+	<article>
+		<h3>&lt;colgroup&gt; and &lt;col&gt;</h3>
+		<p>
+			&lt;colgroup&gt; and &lt;col&gt; elements provide a way to define styling information for an entire column of data all in one place.
+		</p>
+		<p>
+			To style a full column we specify the styling on a <code>&lt;col&gt;</code> element inside a <code>&lt;colgroup&gt;</code> container just bellow the opening <code>&lt;table&gt;</code> tag:
+		</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="xJqVvX" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="<colgroup> for styling full table columns" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/xJqVvX/">&lt;colgroup&gt; for styling full table columns</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</article>
+
+	<article>
+		<h3>&lt;caption&gt;</h3>
+		<p>
+			Used to provide a caption for a table, it must be placed directly beneath the <code>&lt;table&gt;</code> tag. The <code>summary</code> attribute can also be used on the <code>&lt;table&gt;</code> element to provide description, but it's deprecated by the HTML5 spec and it can't be readed by sighted users.
+		</p>
+	</article>
+
+	<article>
+		<h3>&lt;fieldset&gt; and &lt;legend&gt;</h3>
+		<p>
+			The <code>&lt;fieldset&gt;</code> element is used to create groups of widgets that share the same purpose. The <code>&lt;legend&gt;</code>, which is included just bellow the opening <code>&lt;fieldset&gt;</code> tag, labels the <code>&lt;fieldset&gt;</code> element formally describing its purpose.
+		</p>
+		<p>
+			Assistive technologies often use the <code>&lt;legend&gt;</code> element as if it is a part of the label of each widget inside the corresponding <code>&lt;fieldset&gt;</code> element, so in the following example they will read: "Fruit juice size small", "Fruit juice size medium", and "Fruit juice size large"
+		</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="YjZpYY" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="fieldset element" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/YjZpYY/">fieldset element</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<p>
+			Each time you have a set of radio buttons, you ought to nest them inside a <code>&lt;fieldset&gt;</code> element. <code>&lt;fieldset&gt;</code> elements are usefull for sectioning a form and thus improve its usability but its use shouldn't be abused.
+		</p>
+	</article>
+
+	<article>
+		<h3>Form validation</h3>
+		<p>
+			HTML5 can validate most user data without relying on scripts, this is done by using <a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5/Constraint_validation">validation attributes</a> on form elements.
+		</p>
+		<p>
+			When an element is valid:
+		</p>
+		<ul>
+			<li>The element matches the <code>:valid</code> CSS pseudo-class.</li>
+			<li>The browser will submit the form, provided there is nothing else stopping it from doing so.</li>
+		</ul>
+		<p>
+			When an element is invalid:
+		</p>
+		<ul>
+			<li>The element matches the <code>:invalid</code> CSS pseudo-class.</li>
+			<li>The user won't send the form and will display an error message</li>
+		</ul>
+
+		<h4>Validation attributes:</h4>
+		
+		<ul>
+			<li><code>required</code>: Makes an input mandatory, the form won't submit if the input is empty.</li>
+			<li><code>pattern</code>: Validates and input value against a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expression</a></li>
+			<li><code>minlength</code> and <code>maxlength</code>: Constrain in size <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> elements.</li>
+			<li><code>min</code> and <code>max</code>: Provide validation constraint for number fields (inputs of type <code>number</code>).</li>
+			<li><code>step</code>: This attribute is taken by the <code>number</code> and <code>range</code> types and specifies what increment the value will take when the input controls are used.</li>
+		</ul>
+		<p>
+			<strong>Tip</strong>: Some browsers don't support the <code>number</code> type so you could provide the <code>\d+</code> pattern where <code>\d</code> means a digit, and <code>+</code> means 1 or more times so <code>\d+</code> is one or more digits, in order to validate the input text as a number.
+		</p>
+		<p>
+			The browser will display error messages for invalid form widgets but there's no standard way to change their look and feel with CSS and they depend on browser locale, which means that you can have a page in one language but an error message displayed in another language.
+		</p>
+		<p>
+			The only way to customize the appearance and text of the messages is with JavaScript, and HTML5 provides the <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">constraint validation API</a> to check and customize the state of a form element.
+		</p>
+		<p>
+			<strong>Return to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a> and beyond after studying CSS and JavaScript.</strong>
+		</p>
+	</article>
 
 <!-- Attributes -->
 	<h2 id="attributes">Attributes</h2>
 
 	<article>
 		<h3>Boolean attributes:</h3>
-		<p>Boolean attributes are written without values. As they can only have one value, which is generally the same as the attribute name, it can be ommited:</p>
+		<p>
+			Boolean attributes are written without values. As they can only have one value, which is generally the same as the attribute name, it can be ommited:
+		</p>
 		<p data-height="265" data-theme-id="0" data-slug-hash="YjWeNg" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="Boolean attributes" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/YjWeNg/">Boolean attributes</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 	</article>
 
 	<article>
-		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang" target="_blank">lang</a></h3>
+		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></h3>
 		<p>
 			Helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user.
 		</p>
 		<p>
 			A language tag is made of hyphen-separated language subtags, where each subtag indicates a certain property of the language. The 3 most common subtags are:
-			<dl>
-				<dt>Language subtag</dt>
-				<dd>Required. A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is <code>en</code>, and the code for Badeshi is <code>bdz</code>.</dd>
-				<dt>Script subtag</dt>
-				<dd>Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is <code>fr-Brail</code> and <code>ja-Kana</code> is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.</dd>
-				<dt>Region subtag</dt>
-				<dd>Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, <code>es-ES</code> is for Spanish as spoken in Spain, and <code>es-013</code> is Spanish as spoken in Central America. “International Spanish” would just be <code>es</code>.</dd>
-			</dl>
 		</p>
+		<dl>
+			<dt>Language subtag</dt>
+			<dd>Required. A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is <code>en</code>, and the code for Badeshi is <code>bdz</code>.</dd>
+			<dt>Script subtag</dt>
+			<dd>Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is <code>fr-Brail</code> and <code>ja-Kana</code> is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.</dd>
+			<dt>Region subtag</dt>
+			<dd>Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, <code>es-ES</code> is for Spanish as spoken in Spain, and <code>es-013</code> is Spanish as spoken in Central America. “International Spanish” would just be <code>es</code>.</dd>
+		</dl>
 		<p>
 			To find the correct subtags visit:
-			<ul>
-				<li><a href="https://r12a.github.io/app-subtags/" title="Language subtags" target="_blank">https://r12a.github.io/app-subtags/</a></li>
-				<li><a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" title="Language subtags" target="_blank">http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a></li>
-			</ul>
 		</p>
+		<ul>
+			<li><a href="https://r12a.github.io/app-subtags/" title="Language subtags">https://r12a.github.io/app-subtags/</a></li>
+			<li><a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" title="Language subtags">http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a></li>
+		</ul>
 		<p>
 			For the CSS pseudo-class <code>:lang</code>, two invalid language names are different if their names are different. So while <code>:lang(es)</code> matches both <code>lang="es-ES"</code> and <code>lang="es-419"</code>, <code>:lang(xyzzy)</code> would not match <code>lang="xyzzy-Zorp!"</code>.
 		</p>
 		<p>
 			You should keep the tag as short as possible. For instance, use <code>ja</code> for Japanese and not <code>ja-JP</code>, unless there is a particular reason that you need to say that this is Japanese as spoken in Japan, rather than elsewhere.
 		</p>
-		<p><span class="bold">Tip:</span> You should always set the language of your page on the <code>&lt;html&gt;</code> element.</p>
 		<p>
-			Detailed spec: <a href="https://www.w3.org/International/articles/language-tags/" title="Language tag spec" target="_blank">w3 language tags</a>
+			<span class="bold">Tip:</span> You should always set the language of your page on the <code>&lt;html&gt;</code> element.
+		</p>
+		<p>
+			Detailed spec: <a href="https://www.w3.org/International/articles/language-tags/" title="Language tag spec">w3 language tags</a>
 		</p>
 	</article>
 
 	<article>
-		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" target="_blank">title</a></h3>
+		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">title</a></h3>
 		<p>
 			Contains text representing advisory information, related to the element it belongs to. Some typical uses:
-			<ul>
-				<li>Labeling <code>&lt;iframe&gt;</code> elements.</li>
-				<li>Providing an inline programmatically associated label for an <code>&lt;input&gt;</code> element.</li>
-				<li>Labeling controls in data tables.</li>
-			</ul>
 		</p>
+		<ul>
+			<li>Labeling <code>&lt;iframe&gt;</code> elements.</li>
+			<li>Providing an inline programmatically associated label for an <code>&lt;input&gt;</code> element.</li>
+			<li>Labeling controls in data tables.</li>
+		</ul>
 		<p>
 			If this attribute is omitted, it means that the title of the nearest ancestor of this element is still relevant (and could be used as the tooltip for that element). If this attribute is set to the empty string, it explicitly means its nearest ancestor's title is not relevant (and shouldn't be used in the tooltip for this element).
 		</p>
 		<p>
 			Additional semantics are attached to the title attributes of the following elements:
-			<dl>
-				<dt><code>&lt;link&gt;</code></dt>
-				<dd>
-					The <code>title</code> attribute is used to define a preferred or an alternate stylesheet. <br>
-					Any stylesheet in a document falls into one of the following categories:
-					<ul>
-						<li><strong>Persistent</strong> (no rel="alternate", no title=""): always applies to the document.</li>
-						<li><strong>Preferred</strong> (no rel="alternate", with title="..." specified): applied by default, but disabled if an alternate stylesheet is selected. There can only be one preferred stylesheet, so providing stylesheets with different title attributes will cause some of them to be ignored.</li>
-						<li><strong>Alternate</strong> (rel="stylesheet alternate", title="..." must be specified): disabled by default, can be selected.</li>
-					</ul>
-				</dd>
-				<dt><code>&lt;abbr&gt;</code></dt>
-				<dd>
-					The <code>title</code> attribute must contain a full human readable description or expansion of the abbreviation <br>
-					<span class="bold">Tip:</span> The title attribute is not required in abbreviations, you can use <code>&lt;abbr&gt;</code> to semantically note an abbreviation without providing an expansion or description.
-				</dd>
-				<dt><code>&lt;input&gt;</code></dt>
-				<dd>
-					The <code>title</code> attribute is used in tandem with the <code>pattern</code> attribute, which is a regular expression that the control's value is checked against. The <code>title</code> attribute describes the pattern to help the user.
-				</dd>
-			</dl>
 		</p>
+		<dl>
+			<dt><code>&lt;link&gt;</code></dt>
+			<dd>
+				The <code>title</code> attribute is used to define a preferred or an alternate stylesheet. <br>
+				Any stylesheet in a document falls into one of the following categories:
+				<ul>
+					<li><strong>Persistent</strong> (no rel="alternate", no title=""): always applies to the document.</li>
+					<li><strong>Preferred</strong> (no rel="alternate", with title="..." specified): applied by default, but disabled if an alternate stylesheet is selected. There can only be one preferred stylesheet, so providing stylesheets with different title attributes will cause some of them to be ignored.</li>
+					<li><strong>Alternate</strong> (rel="stylesheet alternate", title="..." must be specified): disabled by default, can be selected.</li>
+				</ul>
+			</dd>
+			<dt><code>&lt;abbr&gt;</code></dt>
+			<dd>
+				The <code>title</code> attribute must contain a full human readable description or expansion of the abbreviation <br>
+				<span class="bold">Tip:</span> The title attribute is not required in abbreviations, you can use <code>&lt;abbr&gt;</code> to semantically note an abbreviation without providing an expansion or description.
+			</dd>
+			<dt><code>&lt;input&gt;</code></dt>
+			<dd>
+				The <code>title</code> attribute is used in tandem with the <code>pattern</code> attribute, which is a regular expression that the control's value is checked against. The <code>title</code> attribute describes the pattern to help the user.
+			</dd>
+		</dl>
 		<p>
 			It's a good idea to add titles to links to provide supplementary useful information about the link, such as what kind of information the page contains, or things to be aware of.
 		</p>
 		<p>
-			<span class="bold">Tip:</span> Links are revealed on mouse hover which are not shown while using keyboard controls so if the title info is important to the usability of the page you should put it in the regular text
+			<span class="bold">Tip:</span> Titles are revealed on mouse hover which are not shown while using keyboard controls so if the title info is important to the usability of the page you should put it in the regular text
+		</p>
+		<p>
+			Titles can also be added to images, however this does not come recommended, read <a href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/">The trials and tribulations of the title attribute</a>
 		</p>
 	</article>
 
@@ -214,12 +545,12 @@ img: "https://res.cloudinary.com/ar2ro/image/upload/v1531744035/ar2.ro/html.jpg"
 		<h3>download</h3>
 		<p>
 			When you are linking to a resource that is to be downloaded rather than opened in the browser, you can use the download attribute to provide a default save filename. Example:
+		</p>
 		
 {% highlight html %}<a  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
 		download="firefox-latest-64bit-installer.exe">
   Download Latest Firefox for Windows (64-bit) (English, US)
 </a>{% endhighlight %}
-		</p>
 	</article>
 
 	<article>
@@ -235,44 +566,169 @@ img: "https://res.cloudinary.com/ar2ro/image/upload/v1531744035/ar2.ro/html.jpg"
 		</p>
 		<p>
 			Here's an example that includes a cc, bcc, subject and body:
+		</p>
+
 {% highlight html %}<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>{% endhighlight %}
-		</pre>
-		</p>
 		<p>
-			The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces percent-escaped (<a href="https://en.wikipedia.org/wiki/Percent-encoding" target="_blank">Percent encoding</a>). Also note the use of the question mark (?) to separate the main URL from the field values, and ampersands (&) to separate each field in the mailto: URL. This is standard URL query notation. Read The GET method (<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method" target="_blank">The GET method</a>) to understand what URL query notation is more comonly used for. You can specify multiple addresses.
+			The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces percent-escaped (<a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent encoding</a>). Also note the use of the question mark (?) to separate the main URL from the field values, and ampersands (&) to separate each field in the mailto: URL. This is standard URL query notation. Read The GET method (<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method">The GET method</a>) to understand what URL query notation is more comonly used for. You can specify multiple addresses.
 		</p>
 	</article>
 
 	<article>
 		<h3>cite</h3>
 		<p>
-			Is used in the <code>&lt;blockquote&gt;</code> or <code>&lt;q&gt;</code> element to include a URL pointing to the resource of the quote
+			Is used in the <code>&lt;blockquote&gt;</code> or <code>&lt;q&gt;</code> element to include a URL pointing to the resource of the quote. See the <a href="#cite-element"><code>&lt;cite&gt;</code> element</a>
 		</p>
+	</article>
+
+	<article>
+		<h3>alt</h3>
+		<p>
+			Used in images, its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed.
+		</p>
+		<p>
+			For decorative images you should use background images, but if you must use HTML add a blank <code>alt=""</code>
+		</p>
+		<p>
+			If the image is described adequately by the main text body, you can just use <code>alt=""</code>, avoid writting redundant <code>alt</code> text.
+		</p>
+	</article>
+
+	<article>
+		<h3>sandbox</h3>
+		<p>
+			Usable in embedded content like <code>&lt;iframe&gt;</code>, by using the <code>sandbox</code> attribute with no parameters you impose all available restrictions and if absolutely required, you can add permissions back one by one inside the <code>sandbox</code> attribute value. See the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a> reference entry for all the available options. One important note is that you should never add both allow-scripts and allow-same-origin to your sandbox attribute — in that case the embedded content could bypass the same origin security policy that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+		</p>
+		<p>
+			Note that you should <strong>Always</strong> use the <code>sandbox</code> attribute.
+		</p>
+		<p>
+			Also read: <a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">On the X-Frame-Options Security Header</a>
+		</p>
+	</article>
+
+	<article>
+		<h3>scope</h3>
+		<p>
+			Used in <code>&lt;th&gt;</code> elements, the <code>scope</code> attribute allows to indicate if the header is a header for the column or the row (with <code>col</code> and <code>row</code> attributes respectively). It's also possible to assign a header to a group of headers with the attributes <code>colgroup</code> and <code>rowgroup</code>. In the following example <span class="bold">Clothes</span> is a header for the <span class="bold">Trousers</span>, <span class="bold">Skirts</span>, and <span class="bold">Dresses</span> headers, and <span class="bold">Accessories</span> is a header for the <span class="bold">Bracelets</span> and <span class="bold">Rings</span> headers.
+		</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="YjZWOb" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="Table Headers scope" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/YjZWOb/">Table Headers scope</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</article>
+
+	<article>
+		<h3><code>id</code> and <code>headers</code> for tables</h3>
+		<p>
+			These are an alternative to using the <code>scope</code> attribute. You add an <code>id</code> to each table header and then add a <code>headers</code> attribute to each <code>&lt;td&gt;</code> element. Each <code>headers</code> attribute has to contain a list of the <code>id</code>s of all the <code>&lt;th&gt;</code> elements that act as a header for that cell:
+		</p>
+		<p>
+			This gives your HTML table an explicit definition of the position of each cell in the table, defined by the header(s) for each column and row it is part of, kind of like a spreadsheet. This method creates very precise associations between headers and data cells but it uses a lot more markup and does not leave any room for errors.  The scope approach is usually enough for most tables.
+		</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="qyrNgg" data-default-tab="html,result" data-user="ar2ro" data-embed-version="2" data-pen-title="Table id and headers attributes" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/qyrNgg/">Table id and headers attributes</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</article>
+
+	<article>
+		<h3>enctype</h3>
+		<p>
+			This lets you specify the value of the <code>Content-Type</code> HTTP header included in the request generated when the form is submitted. By default, its value is application/x-www-form-urlencoded. In human terms, this means: "This is form data that has been encoded into URL parameters."
+		</p>
+		<p>
+			In order to send files, which are binary data instead of text data you must:
+		</p>
+		<ul>
+			<li>Set the <code>method</code> attribute to <code>POST</code> because file content can't be put inside URL parameters.</li>
+			<li>Set the value of <code>enctype</code> to <code>multipart/form-data</code> because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if text is also entered into the form).</li>
+			<li>Include one or more File picker widgets to allow your users to select the file(s) that will be uploaded.</li>
+		</ul>
 	</article>
 
 <!-- Tools -->
 	<h2 id="tools">Tools / References</h2>
 	<ul>
-		<li><a href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" target="_blank">Character Entity References</a></li>
-		<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" title="Extended elements reference">Extended elements reference</a></li>
-		<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#HTML_layout_elements_in_more_detail" target="_blank" title="HTML layout elements in more detail">HTML layout elements in more detail</a></li>
+		<li><a href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">Character Entity References</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" title="Extended elements reference">Extended elements reference</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#HTML_layout_elements_in_more_detail" title="HTML layout elements in more detail">HTML layout elements in more detail</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.</a></li>
+		<li><a href="https://validator.w3.org/">Markup validation</a></li>
+		<li><a href="https://letsencrypt.org/">free, automated, and open Certificate Authority.</a></li>
+		<li>UX Design: <a href="http://www.uxmatters.com/">UXMatters</a>, <a href="http://uxdesign.com/">UXDesign</a>, <a href="http://uxdesign.smashingmagazine.com/">UX Design section of SmashingMagazine.</a></li>
 	</ul>
 
 <!-- Tips -->
 	<h2 id="tips">Tips</h2>
-	<article>
-		<p>
-			Links <strong>can</strong> wrap block level elements. Example:
+		<ul>
+			<li>
+				<p>
+					Links <strong>can</strong> wrap block level elements. Example:
+				</p>
+
 {% highlight html %}<a href="https://www.mozilla.org/en-US/">
   <img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage">
 </a>{% endhighlight %}
-		</p>
-	</article>
+			</li>
+			<li>
+				<p>You can quite happily have two index.html files in one project as long as they are in different locations in the filesystem. Many web sites do. The second index.html would perhaps be the main landing page for project-related information.</p>
+			</li>
+			<li>
+				<p>
+					In order to improve speed, it's a good idea to set the iframe's src attribute with JavaScript after the main content is done loading. This makes your page usable sooner and decreases your official page load time (an important SEO metric.)
+				</p>
+			</li>
+			<li>
+				<p>
+					Text in vector images remains accessible (which also benefits your SEO).<br>
+					SVGs lend themselves well to styling/scripting, because each component of the image is an element that can be styled via CSS or scripted via JavaScript.
+				</p>
+			</li>
+			<li>
+				<p>
+					<code>&lt;tfoot&gt;</code> can be placed either at the begining or the end of the table, the browser will still render it at the bottom of the table
+				</p>
+			</li>
+			<li>
+				<p>
+					It's strictly forbidden to nest a form inside another form. You can place a form widget outside of a <code>&lt;form&gt;</code> element but then, those will has nothing to do with any form. HTML5 introduces the <code>form</code> attribute which could be used to bind an element with a form even if it's not enclosed within a <code>&lt;form&gt;</code> (browser support is not good enough to rely on it).
+				</p>
+			</li>
+			<li>
+				<p>
+					A form widget can be nested inside its <code>&lt;label&gt;</code> element or placed alongside it, in either case the <code>for</code> attribute of the <code>&lt;label&gt;</code> element must correspond with the <code>id</code> attribute of the widget:
+				</p>
 
-	<article>
-		<p>You can quite happily have two index.html files in one project as long as they are in different locations in the filesystem. Many web sites do. The second index.html would perhaps be the main landing page for project-related information.</p>
-	</article>
+{% highlight html %}<!-- Widget inside label -->
+<label for="name">
+  Name: <input type="text" id="name" name="user_name">
+</label>
+<!-- Widget alongside label -->
+<label for="name">Name:</label>
+<input type="text" id="name" name="user_name">{% endhighlight %}
 
-</main>
+				<p>
+					Although not being a good idea, you can put multiple labels on a single widget. If you decide to do so, you should consider the following:
+				</p>
+
+{% highlight html %}<!-- So this: -->
+<div>
+  <label for="username">Name:</label>
+  <input type="text" name="username">
+  <label for="username"><abbr title="required">*</abbr></label>
+</div>
+
+<!-- would be better done like this: -->
+<div>
+  <label for="username">
+    <span>Name:</span>
+    <input id="username" type="text" name="username">
+    <abbr title="required">*</abbr>
+  </label>
+</div>{% endhighlight %}
+
+			</li>
+
+			<li>
+				<p>
+					In HTML5 the <code>action</code> attribute for the <code>&lt;form&gt;</code> element is no longer needed.
+				</p>
+			</li>
+		</ul>

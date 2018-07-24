@@ -1,6 +1,6 @@
-<nav class="main-nav">
+<nav>
 	<ul>
-		<li class="{% if page.name == 'index.html' %}active{% endif %}"><a href="/">BLOG</a></li>
-		<li class="{% if page.name == 'annotations.html' %}active{% endif %}"><a href="/annotations/">ANNOTATIONS</a></li>
+		<li class="{% if page.menu == 'blog' %}active{% endif %}"><a href="/">BLOG</a></li>
+		<li class="{% if page.menu == 'annotations' %}active{% endif %}"><a href="/annotations/">ANNOTATIONS</a></li>
 	</ul>
 </nav>

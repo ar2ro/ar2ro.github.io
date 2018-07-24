@@ -1,37 +1,148 @@
 ---
 layout: default
+menu: blog
 ---
 
-<main class="page-content">
-	{% for post in site.posts %}
-    <article class="post excerpt">
-			<header>
-				<h2>
-					<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
-				</h2>
-			</header>
-			<section class="excerpt">
-				{{ post.excerpt }}
-			</section>
-			<p class="read-more">
-				<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">READ MORE</a> 
-				<span class="minutes">
-					<i class="far fa-clock"></i> 
-					{% assign words = post.content | number_of_words %}
-				  {% if words < 360 %}
-				    1 minute
-				  {% else %}
-				    {{ words | divided_by:180 }} minutes
-				  {% endif %}
-				</span>.
-			</p>
-			<footer>
-				<p class="post-meta">
-		      <time datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-		      <span>{{ post.categories }}</span>
-		      <!--<span><a href="#">DOCS</a>, <a href="#">Help</a></span>-->
-		    </p>
-			</footer>
-		</article>
-  {% endfor %}
-</main>
+{% for post in site.posts %}
+  <article class="post excerpt">
+		<header>
+			<h2>
+				<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+			</h2>
+		</header>
+		<div class="excerpt">
+			{{ post.excerpt }}
+		</div>
+		<p class="read-more">
+			<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">READ MORE</a> 
+			<span class="minutes">
+				<i class="far fa-clock"></i> 
+				{% assign words = post.content | number_of_words %}
+			  {% if words < 360 %}
+			    1 minute
+			  {% else %}
+			    {{ words | divided_by:180 }} minutes
+			  {% endif %}
+			</span>.
+		</p>
+		<footer>
+			<p class="post-meta">
+	      <time datetime="{{ post.date | date: '%Y-%m-%d %T' }}-0400">{{ post.date | date: "%b %-d, %Y" }}</time>
+	      <span>{{ post.categories }}</span>
+	      <!--<span><a href="#">DOCS</a>, <a href="#">Help</a></span>-->
+	    </p>
+		</footer>
+	</article>
+{% endfor %}
+{% for post in site.posts %}
+  <article class="post excerpt">
+		<header>
+			<h2>
+				<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+			</h2>
+		</header>
+		<div class="excerpt">
+			{{ post.excerpt }}
+		</div>
+		<p class="read-more">
+			<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">READ MORE</a> 
+			<span class="minutes">
+				<i class="far fa-clock"></i> 
+				{% assign words = post.content | number_of_words %}
+			  {% if words < 360 %}
+			    1 minute
+			  {% else %}
+			    {{ words | divided_by:180 }} minutes
+			  {% endif %}
+			</span>.
+		</p>
+		<footer>
+			<p class="post-meta">
+	      <time datetime="{{ post.date | date: '%Y-%m-%d %T' }}-0400">{{ post.date | date: "%b %-d, %Y" }}</time>
+	      <span>{{ post.categories }}</span>
+	      <!--<span><a href="#">DOCS</a>, <a href="#">Help</a></span>-->
+	    </p>
+		</footer>
+	</article>
+{% endfor %}
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p><p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur molestiae cum, deserunt ipsum soluta dolore. Similique, rem! Dolorem ipsam officia dolorum aut officiis culpa quia exercitationem iure nostrum, laboriosam!
+</p>
