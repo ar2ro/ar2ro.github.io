@@ -1,0 +1,140 @@
+---
+layout: page
+title: "CSS annotations"
+img: "https://res.cloudinary.com/ar2ro/image/upload/v1532452998/ar2.ro/css3.jpg"
+menu: annotations
+---
+
+<h1>CSS annotations</h1>
+
+<ul>
+	<li><a href="#elements">Elements</a></li>
+	<li><a href="#attributes">Attributes</a></li>
+	<li><a href="#tools">Tools / References</a></li>
+</ul>
+
+<article>
+	<h3>@import</h3>
+	<p>
+		You can inport stylesheets into stylesheets or even inside the <code>&lt;style&gt;</code> tag in the document <code>head</code>. The <code>@import</code> statement must precede all other CSS rules in a style sheet in order to work properly.
+	</p>
+	<p>
+		Although <code>@import</code> allow us to write more modular CSS (we can have separate stylesheets for layout, typography etc.), it has an impact in site performance as each <code>@import</code> statement requires a new request to the server.
+	</p>
+</article>
+
+<article>
+	<h3>Pseudo-classes</h3>
+	<p>
+		A pseudo-class is a keyword we add to a selector to style a special state of an element. The most common pseudo-classes are:
+	</p>
+	<ul>
+		<li><code>:link</code>: Targets links that have not been visited by the user.</li>
+		<li><code>:visited</code>: Targets links that have been visited (clicked) by the user.</li>
+		<li><code>:hover</code>: Targets an element when a user hovers over it.</li>
+		<li><code>:active</code>: Gets applied when an element is in an active state (while mouse's left button is pressed, and before it's released, hover an element).</li>
+		<li><code>:focus</code>: It's only aplied to interactive elements like links, buttons and form elements, as soon as the element receive focus (the elements are navigated with the keyboard).</li>
+	</ul>
+</article>
+
+<article>
+	<h3>CSS Data Types</h3>
+	<p>
+		CSS properties has a set of values it can accept, those values are categorizes into <a href="https://developer.mozilla.org/en-US/docs/tag/CSS%20Data%20Type">data types</a> 
+	</p>
+	<p>
+		Some common data types includes: color, integers, numbers, percentages, length (pixels, ems, rems - Usually we'll define integer and number values with a length unit e.g. "<span class="bold">90px</span>").
+	</p>
+	
+	<h4>Absolute length units</h4>
+	<h4>Pixels</h4>
+	<p>
+		Absolute units - like pixels - are always fixed in relation to each other (they don't scale like relative units do). When we use absolute units, the size we define will always remain the same and will not scale regardless of the browser window and size of the screen.
+	</p>
+	<p>
+		As pixel densities are increasing across devices and display resolutions vary widely, nowadays, the pixel unit in CSS doesn't really have anything to do with physical screen pixels, so the CSS pixel is actually an abstract reference unit.
+	</p>
+	<p>
+		The way CSS pixels are displayed has more to do with the pixel density of the viewing device. For example if we give an element a width and height of 200 pixels, when we view the design on a normal screen, it appears 200px*200px, but when we view it on a device that has twice the pixel density, we might notice that the width and height of the element is actually now equivalent to 400px.
+	</p>
+	<p>
+		If the pixel density of a device is higher from that of a typical display the display rescales the pixel values, providing consistency across different devices, otherwise our elements might appear a lot smaller on displays with high pixel densities.
+	</p>
+	<h4>Relative length units</h4>
+	<p>
+		Relative units - like percentage - are always relatives to another meassurement unit, in the case of percentages, the percentage value is measured relative to a parent element's length.
+	</p>
+	<p>
+		Properties like width, margin and padding, accept percentages are usually used for layout since they allow fluid sizing of elements relative to their container.
+	</p>
+	<h5><code>em</code> unit</h5>
+	<p>
+		The <code>em</code> is called a font relative unit because it's calculated based on a parent elements font size. So if we give an element's property a value of <code>1em</code>, that will be equal to the <code>font-size</code> value of the parent element.
+	</p>
+	<p>
+		<code>em</code> units have a compounding effect given by its hineritance nature. Example: 
+	</p>
+	<p>
+		<code>main</code> is 2 times the size of its parent (a document default font size is 16px), this makes it 32px. Then <code>&lt;h1&gt;</code> is 1.625 times the size of its parent (main) 1.625*32px = 52px
+	</p>
+
+{% highlight html %}<main>
+	<h1>Header</h1>
+</main>{% endhighlight %}
+{% highlight css %}main {
+	font-size: 2em;
+}
+h1 {
+	font-size: 1.625em;
+}{% endhighlight %}
+	<p>
+		<span class="bold">NOTE:</span> This is not working in practice, <code>h1</code> is not getting the biggest 52px size.
+	</p>
+
+	<h5><code>rem</code> unit</h5>
+	<p>
+		Similar to an <code>em</code> unit but its only relative to the root element (<code>&lt;html&gt;</code>) of the page. Being only relative to the root element, <code>rem</code> units doesn't have the compounding efect <code>em</code>s have.
+	</p>
+	<p>
+		
+	</p>
+	<p>
+		References:
+	</p>
+	<ul>
+		<li><a href="https://www.w3schools.com/cssref/css_units.asp">CSS units</a></li>
+		<li><a href="http://inamidst.com/stuff/notes/csspx">CSS px is an Angula Measumerent</a></li>
+	</ul>
+</article>
+
+<article>
+	<h3>Font property shorthand</h3>
+	<p>
+		<span class="bold">Structure:</span> weight size/line-height font-stack
+	</p>
+	<p>
+		Note that the font-size and font-family must be defined, if ommited, the entire line is ignored by the browser. The order of the values is also important.
+	</p>
+{% highlight css %}body{
+	font: normal 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}{% endhighlight %}
+</article>
+
+<h1>Video 23 CSS Basics</h1>
+
+<!-- Tools -->
+	<h2>Tools / References</h2>
+	<ul>
+		<li>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network (MDN)</a>
+		</li>
+		<li>
+			<a href="https://www.webplatform.org/docs/css/">WebPlatform.org</a>
+		</li>
+		<li>
+			<a href="http://www.w3.org/Style/CSS/Overview.en.html">W3C</a>
+		</li>
+		<li>
+			<a href="http://caniuse.com/">Can I Use</a>
+		</li>
+	</ul>

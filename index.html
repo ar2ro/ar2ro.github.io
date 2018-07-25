@@ -10,9 +10,9 @@ menu: blog
 				<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
 			</h2>
 		</header>
-		<div class="excerpt">
-			{{ post.excerpt }}
-		</div>
+		<p class="excerpt">
+			{{ post.excerpt | strip_html | strip_newlines | truncate: 256 }}  
+		</p>
 		<p class="read-more">
 			<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">READ MORE</a> 
 			<span class="minutes">

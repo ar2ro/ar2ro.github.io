@@ -1,7 +1,7 @@
 body {
 	display: grid;
 	grid-template-rows: repeat(3, auto);
-	grid-template-columns: 3vw 94vw 3vw;
+	grid-template-columns: auto 94vw auto;
 }
 .site-header {
 	grid-column: 1 / -1;
@@ -55,7 +55,7 @@ main {
 @media (min-width: 900px) {
 	body {
 		display: grid;
-		grid-template-columns: 5vw 25vw 65vw 5vw;
+		grid-template-columns: auto 25vw 65vw auto;
 		grid-template-rows: repeat(2, auto);
 	}
 	.site-header {

@@ -1,8 +1,7 @@
 body {
 	background-color: $grey-light;
-	font-family: 'Source Sans Pro', sans-serif;
+	font: 1em/1.375 'Source Sans Pro', sans-serif;
 	color: $grey-medium;
-	line-height: 1.375;
 	padding-top: 5px;
 	&:before {
 		content: "";
@@ -19,24 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	color: $grey-dark;
 }
-h1 {
-	font-size: 1.85rem;
-}
-h2 {
-	font-size: 1.5rem;
-}
-h3 {
-	font-size: 1.33rem;
-}
-h4 {
-	font-size: 1.17rem;
-}
-h5 {
-	font-size: 0.83rem;
-}
-h6 {
-	font-size: 0.67rem;
-}
+
 h1 a:link, h1 a:visited, h1 a:hover, h1 a:active,
 h2 a:link, h2 a:visited, h2 a:hover, h2 a:active,
 h3 a:link, h3 a:visited, h3 a:hover, h3 a:active,
@@ -175,7 +157,7 @@ pre {
 				margin: auto;
 			}
 			.presentation {
-				text-align: left;
+				text-align: justify;
 			}
 			
 		}
