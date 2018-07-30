@@ -37,14 +37,12 @@ a[target="_blank"]:before {
   font-weight: 900;
   font-size: 0.8em;
   display: inline-block;
-  margin-right: 5px;
-	/*
-	content: "\f35d";
-	font-family: "Font Awesome 5 Free";
-	display: inline-block;
-	margin-right: 5px;
-	font-size: 0.875em;
-	*/
+  margin-right: 1px;
+}
+p, li, dd {
+	a[target="_blank"]:before {
+		margin-left: 5px;
+	}
 }
 address {
 	font-style: normal;
