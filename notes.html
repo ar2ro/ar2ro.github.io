@@ -1,0 +1,24 @@
+---
+layout: page
+title: Notes
+permalink: /notes/
+menu: notes
+---
+
+<section class="notes">
+	<div class="description">
+		<h1>My personal notes for every learning path I follow</h1>
+		<p>
+			This page includes my notes for every learning path I follow, they're very personal as they only include concepts, examples, and references I feel like I need to review over time, and they're written in a manner that it's easy for me to understand. Feel free to take a look.
+		</p>
+	</div>
+	{% for note in site.notes %}
+		<article>
+			<a href="{{ note.url | prepend: site.baseurl }}" title="{{ note.title }}">
+				<div class="bg" style="background-image: url('{{ note.img }}');"></div>
+				<!--<img src="{{ note.img }}" alt="{{ note.title }}">-->
+				<h2>{{ note.title }}</h2>
+			</a>
+		</article>
+	{% endfor %}
+</section>

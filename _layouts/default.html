@@ -8,7 +8,7 @@
     {% include header.html %}
     {% include navigation.html %}
 		
-		<main>
+		<main{% if page.type %} class="{{ page.type }}"{% endif %}>
     	{{ content }}
 		</main>
     

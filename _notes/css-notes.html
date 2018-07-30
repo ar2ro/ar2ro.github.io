@@ -1,11 +1,12 @@
 ---
 layout: page
-title: "CSS annotations"
+title: "CSS notes"
 img: "https://res.cloudinary.com/ar2ro/image/upload/v1532452998/ar2.ro/css3.jpg"
-menu: annotations
+menu: notes
+type: note
 ---
 
-<h1>CSS annotations</h1>
+<h1>CSS notes</h1>
 
 <ul>
 	<li><a href="#elements">Elements</a></li>
@@ -120,7 +121,72 @@ h1 {
 }{% endhighlight %}
 </article>
 
-<h1>Video 23 CSS Basics</h1>
+<article>
+	<h3>Margin, padding and borders</h3>
+	<p>
+		The value for <code>margin</code> and <code>padding</code> determines the width of the property. 
+	</p>
+	<p>
+		The shorthand can be written with either 1,2,3 or 4 values. When written with 3 values, each value represent the following sides:
+	</p>
+	<ol>
+		<li>Top side</li>
+		<li>Left and right side</li>
+		<li>Bottom side</li>
+	</ol>
+	<p>
+		<code>border</code> propertie's value takes, besides the width, the style and color. Although you can set different values for each side of the box, in order to use the shorthand, properties for all sides must be equal so the following wont work:
+	</p>
+{% highlight css %}element{
+	border: 3px 10px solid dotted dashed red orange blue teal;
+}{% endhighlight %}
+	<p>
+		<strong>Tip:</strong> If no border color is specified, the border will take the text color of the element.
+	</p>
+	<p>
+		The value for the width of these properties may be any <code>length</code> or <code>percentage</code> unit:
+	</p>
+	<ul>
+		<li>If pixels <code>10px</code> is used, the width will be fixed.</li>
+		<li>If percentage <code>10%</code> is used, the width will be relative to the total width of the container.</li>
+		<li>If em units <code>10em</code> is used, the width will be relative to the element's font size.</li>
+	</ul>
+	<p>
+		The <code>margin</code> property can take an aditional value, the <code>auto</code> keyword. In this case the browser automatically calculates the margins for each side and set all margins to be equal. It's commonly used to center content horizontally. 
+	</p>
+	<p>
+		<strong>Tip:</strong> Margin and padding can be added to inline elements, in this case the margin property is ignored on top and bottom sides.
+	</p>
+	<p data-height="265" data-theme-id="0" data-slug-hash="OwgKXL" data-default-tab="css,result" data-user="ar2ro" data-pen-title="Padding, Margin and Border" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/OwgKXL/">Padding, Margin and Border</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	<p>
+		<strong>Tip;</strong> Contrary to <code>padding</code> and <code>border</code>, <code>margin</code> do accept negative values.
+	</p>
+</article>
+
+<article>
+	<h3>box-sizing</h3>
+	<p>
+		When defining widths and heights for an element and then defining a <code>padding</code> and/or a <code>border</code>, the width and height of those properties will affect the total width or height of the element.
+	</p>
+	<p>
+		So take for example an element set to be 100px wide with a padding of 30px, the element total width will be now 130px instead of the 100px we defined earlier.
+	</p>
+	<p>
+		The value <code>border-box</code> for the <code>box-sizing</code> dinamically subtracts the borders and paddings of each side from the width and height of the elements so elements maintain their defined widths and heights.
+	</p>
+	<p data-height="265" data-theme-id="0" data-slug-hash="jpLrNX" data-default-tab="html,result" data-user="ar2ro" data-pen-title="box-sizing" class="codepen">See the Pen <a href="https://codepen.io/ar2ro/pen/jpLrNX/">box-sizing</a> by Arturo Montero (<a href="https://codepen.io/ar2ro">@ar2ro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+</article>
+
+<article>
+	<h3>background images</h3>
+	<h4>background-size</h4>
+	<p>
+		We can set the <code>background-size</code> using any length or percentage values.
+	</p>
+	<p>
+		When a <code>background-size</code> is declared as a percentage it becomes relative to the width and height of the background area of the element rather than to the width and height of the actual image.
+	</p>
+</article>
 
 <!-- Tools -->
 	<h2>Tools / References</h2>

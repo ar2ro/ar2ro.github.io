@@ -89,6 +89,6 @@ main {
 }
 @media (min-width: 1125px) {
 	body {
-		grid-template-columns: 10vw 25vw auto 10vw;
+		grid-template-columns: auto 25vw 65vw auto;
 	}
 }
