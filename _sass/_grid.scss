@@ -1,94 +1,77 @@
 body {
 	display: grid;
 	grid-template-rows: repeat(3, auto);
-	grid-template-columns: auto 94vw auto;
+	grid-template-columns: 3vw 1fr 3vw;
 }
 .site-header {
-	grid-column: 1 / -1;
+	grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
 nav {
 	grid-column: 2 / 3;
-  grid-row: 2 / 3;
+	grid-row: 2 / 3;
 }
 main {
 	grid-column: 2 / 3;
-  grid-row: 3 / -1;
+	grid-row: 3 / 4;
 }
-@media (max-width: 900px){
+@media(max-width: 900px){//from 0 to 900
 	.site-header {
-		padding: 0 3vw;
-	}
-	.header-content {
-		display: grid;
-  	grid-template-columns: auto 1fr auto;
-  	grid-template-rows: repeat(3,auto);
-  	align-items: center;
-  	address {
-  		display: contents;
-  	}
-  	.details {
-  		display: contents;
-  	}
-  	.name {
-  		grid-column: 2/3;
-  		grid-row: 2/3;
-  	}
-  	.logo {
-  		grid-column: 1 / 2;
-  		grid-row: 1 / -1;
-  	}
-  	.nickname {
-  		grid-column: 2/3;
-	    grid-row: 2/3;
-	    align-self: end;
-  	}
-  	.presentation {
-  		display: none;
-  	}
-  	.social {
-  		grid-column: 3/4;
-  		grid-row: 2/3;
-  	}
+		grid-column: 1 / -1;
+		> div {
+			display: grid;
+    	grid-template-columns: auto 1fr auto;
+    	grid-template-rows: repeat(2, auto);
+		}
+		.home-link, address, address > .tag, address > .tag > span {
+			display: contents;
+		}
+		.logo {
+			grid-column: 1 / 2;
+			grid-row: 1 / -1;
+			align-self: center;
+		}
+		.nickname, h1, h2 {
+			grid-column: 2 / 3;
+		}
+		.nickname {
+			grid-row: 1 / 2;
+		}
+		h1, h2 {
+			grid-row: 2 / 3;
+		}
+		.resume {
+			display: none;
+		}
+		.social {
+			grid-column: 3 / 4;
+			grid-row: 1 / -1;
+			align-self: center;
+		}
 	}
 }
-@media (min-width: 900px) {
+@media(min-width: 900px){//from 900 to 1126
 	body {
-		display: grid;
-		grid-template-columns: auto 25vw 65vw auto;
-		grid-template-rows: repeat(2, auto);
-	}
-	.site-header {
-		grid-column: 2 / 3;
-		grid-row: 1 / -1;
+		grid-template-columns: 2.5% 30% 65% 2.5%;
 	}
 	nav {
-		grid-column: 3 / -2;
-		grid-row: 1 / 1;
+		grid-column: 3 / 4;
+	  grid-row: 1 / 2;
 	}
 	main {
 		grid-column: 3 / 4;
-		grid-row: 2 / -1;
+	  grid-row: 2 / 3;
 	}
-	.header-content {
-		display: grid;
-		grid-template-rows: repeat(5, auto);
-		address {
-  		display: contents;
-  	}
-  	.details {
-  		display: contents;
-  	}
-  	.logo {
-  		grid-row: 1/2;
-  	}
-  	.name {
-  		grid-row: 2/3;
-  	}
+	b.bg {
+		grid-column: 4 / 5;
+		grid-row: 1 / -1;
+	}
+	.site-header {
+		grid-row: 1 / -1;
 	}
 }
-@media (min-width: 1125px) {
+@media(min-width: 1126px){//1126 up
 	body {
-		grid-template-columns: auto 25vw 65vw auto;
+		grid-template-columns: 5% 25% 65% 5%;
 	}
 }

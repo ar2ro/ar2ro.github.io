@@ -1,0 +1,86 @@
+@media(min-width: 900px){
+	.site-header {
+		.open-close {
+			&:before {
+				content: '<';
+				color: #5FB3B3;
+			}
+			&:after {
+				content: '>';
+				color: #5FB3B3;
+			}
+		}
+		.close-open {
+			&:before {
+				content: '>';
+				color: #5FB3B3;
+			}
+			&:after {
+				content: '</';
+				color: #5FB3B3;
+			}
+		}
+		h1 .tag {
+			&:before {
+				content: 'h1';
+				color: #EB606B;
+			}
+			&:after {
+				content: 'h1';
+				color: #EB606B;
+			}
+		}
+		h2 .tag {
+			&:before {
+				content: 'h2';
+				color: #EB606B;
+			}
+			&:after {
+				content: 'h2';
+				color: #EB606B;
+			}
+		}
+		address > .tag {
+			&:before {
+				content: 'address';
+				color: #EB606B;
+			}
+			&:after {
+				content: 'address';
+				color: #EB606B;
+			}
+		}
+		a > .tag {
+			&:before {
+				content: 'a';
+				color: #EB606B;
+			}
+			&:after {
+				content: 'a';
+				color: #EB606B;
+			}
+		}
+		.href {
+			&:before {
+				content: ' href';
+				color: #BB80B3;
+			}
+			&.twitter .url:before {
+				content: '="https://twitter.com/ar2royv"';
+				color: #99C794;
+			}
+			&.github .url:before {
+				content: '="https://github.com/ar2ro"';
+				color: #99C794;
+			}
+			&.email .url:before {
+				content: '="mailto:arturo@ar2.ro"';
+				color: #99C794;
+			}
+			&.steemit .url:before {
+				content: '="https://steemit.com/@ar2ro"';
+				color: #99C794;
+			}
+		}
+	}
+}

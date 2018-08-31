@@ -1,22 +1,57 @@
-<header class="site-header">
-	<div class="header-content">
+<header class="site-header"><div>
+	<a class="home-link" href="/">
+		<img src="https://res.cloudinary.com/ar2ro/image/upload/v1532452998/ar2.ro/logo.png" title="Arturo Montero" alt="Arturo Montero avatar" class="logo">
 		{% if page.name == 'index.html' %}
-			<h1 class="name">Arturo Montero</h1>
+			<h1 class="title open-close"><span class="tag"><span class="close-open">From hobbyist developer to job ready in X months</span></span></h1>
 		{% else %}
-			<h2 class="name">Arturo Montero</h2>
+			<h2 class="title open-close"><span class="tag"><span class="close-open">From hobbyist developer to job ready in X months</span></span></h2>
 		{% endif %}
-		<address>
-			<a href="/" class="details">
-				<img src="https://res.cloudinary.com/ar2ro/image/upload/v1532452998/ar2.ro/logo.png" title="Arturo Montero" alt="Arturo Montero" class="logo">
-				<div class="nickname">ar2ro - <span class="small">Hobbyist Developer</span></div>
-			</a>
-			<p class="presentation">I'm a hobbyist developer pursuing a career change at 32<abbr title="years old">yo</abbr>. I'll start by relearning the fundamentals of HTML, CSS, JavaScript and moving to more advanced topics afterwards in the hope of landing a developer job.</p>
-			<p class="social">
-				<a href="https://twitter.com/ar2royv" title="Arturo's Twitter profile"><i class="fab fa-twitter"></i></a>
-				<a href="https://github.com/ar2ro" title="Arturo's GitHub profile"><i class="fab fa-github"></i></a>
-				<a href="mailto:arturo@ar2.ro" title="Send me an email"><i class="far fa-envelope"></i></a>
-				<a href="https://steemit.com/@ar2ro" title="Arturo's Steemit profile"><img src="https://res.cloudinary.com/ar2ro/image/upload/v1532452997/ar2.ro/steemit.png" alt="steemit"></a>
-			</p>
-		</address>
-	</div>
-</header>
+	</a>
+	
+
+	<address class="open-close">
+		<span class="tag">
+			<span class="close-open">
+				<span class="nickname">Arturo Montero (ar2ro)</span>
+				<span class="resume">I'm a hobbyist developer pursuing a career change at 32<abbr title="years old">yo</abbr>. I'll start by relearning the fundamentals of HTML, CSS, JavaScript and moving to more advanced topics afterwards in the hope of landing a developer job.</span>
+				<span class="social">
+					<a class="open-close" href="https://twitter.com/ar2royv" title="Arturo's Twitter profile">
+						<span class="tag">
+							<span class="href twitter"><span class="url"></span></span>
+							<span class="close-open">
+								<i class="fab fa-twitter"></i> <span class="name">Twitter</span>
+							</span>
+						</span>
+					</a>
+					<a class="open-close" href="https://github.com/ar2ro" title="Arturo's GitHub profile">
+						<span class="tag">
+							<span class="href github"><span class="url"></span></span>
+							<span class="close-open">
+								<i class="fab fa-github"></i> <span class="name">GitHub</span>
+							</span>
+						</span>
+					</a>
+					<a class="open-close" href="mailto:arturo@ar2.ro" title="Send me an email">
+						<span class="tag">
+							<span class="href email"><span class="url"></span></span>
+							<span class="close-open">
+								<i class="far fa-envelope"></i> <span class="name">Email</span>
+							</span>
+						</span>
+					</a>
+					<a class="open-close" href="https://steemit.com/@ar2ro" title="Arturo's Steemit profile">
+						<span class="tag">
+							<span class="href steemit"><span class="url"></span></span>
+							<span class="close-open">
+								<img src="https://res.cloudinary.com/ar2ro/image/upload/v1532452997/ar2.ro/steemit.png" alt="steemit">
+								<span class="name">Steemit</span>
+							</span>
+						</span>
+					</a>
+				</span>
+			</span>
+		</span>		
+	</address>
+</div></header>
+{% comment %} hack to add bg color to empty grid at the right {% endcomment %}
+<b class="bg"></b>

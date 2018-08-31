@@ -1,168 +1,211 @@
-body {
-	background-color: $grey-light;
-	font: 1em/1.375 'Source Sans Pro', sans-serif;
-	color: $grey-medium;
-	padding-top: 5px;
-	&:before {
-		content: "";
-    position: fixed;
-    background: $brand-color;
-    left: 0;
-    right: 0;
-    height: 5px;
-    z-index: 9;
+//GENERAL
+	body {
+		
+		background-color: #1A1E24;
+		font: 1.1875rem/1.375 'Source Sans Pro', sans-serif;
+		color: $grey-medium;
+		padding-top: 5px;
+		&:before {
+			content: "";
+	    position: fixed;
+	    background: $brand-color;
+	    left: 0;
+	    right: 0;
+	    height: 5px;
+	    z-index: 9;
+		}
 	}
-}
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
-	color: $grey-dark;
-}
-
-h1 a:link, h1 a:visited, h1 a:hover, h1 a:active,
-h2 a:link, h2 a:visited, h2 a:hover, h2 a:active,
-h3 a:link, h3 a:visited, h3 a:hover, h3 a:active,
-h4 a:link, h4 a:visited, h4 a:hover, h4 a:active,
-h5 a:link, h5 a:visited, h5 a:hover, h5 a:active,
-h6 a:link, h6 a:visited, h6 a:hover, h6 a:active {
-	text-decoration: none;
-	color: $grey-dark;
-}
-p a, li a, dd a {
-	font-size: 0.9em;
-}
-a[target="_blank"]:before {
-	content: "\f35d";
-	font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 0.8em;
-  display: inline-block;
-  margin-right: 1px;
-}
-p, li, dd {
+	@media(max-width: 900px){
+		body {
+			font-size: 1.125rem;
+			background-color: $grey-light;
+		}
+	}
+	@media(max-width: 612px){
+		body {
+			font-size: 1rem;
+		}
+	}
+	@media(min-width: 900px){
+		b.bg {//Hack to apply background to the 4th column in body grid
+			background: #fff;
+		}
+	}
+	h1, h2, h3, h4, h5, h6, a {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		color: $grey-dark;
+	}
+	h1 a:link, h1 a:visited, h1 a:hover, h1 a:active,
+	h2 a:link, h2 a:visited, h2 a:hover, h2 a:active,
+	h3 a:link, h3 a:visited, h3 a:hover, h3 a:active,
+	h4 a:link, h4 a:visited, h4 a:hover, h4 a:active,
+	h5 a:link, h5 a:visited, h5 a:hover, h5 a:active,
+	h6 a:link, h6 a:visited, h6 a:hover, h6 a:active {
+		text-decoration: none;
+		color: $grey-dark;
+	}
+	p a, li a, dd a {
+		font-size: 0.9rem;
+		color: $brand-color;
+	}
 	a[target="_blank"]:before {
-		margin-left: 5px;
+		content: "\f35d";
+		font-family: "Font Awesome 5 Free";
+	  font-weight: 900;
+	  font-size: 0.8em;
+	  display: inline-block;
+	  margin-right: 1px;
 	}
-}
-address {
-	font-style: normal;
-	.social {
-		a {
-			display: inline-block;
-			margin-right: 5px;
-		}
-		i {
-			font-size: 20px;
-		}
-		img {
-			width: 20px;
-			margin-bottom: -3px;
+	p, li, dd {
+		a[target="_blank"]:before {
+			margin-left: 5px;
 		}
 	}
-}
-dt {
-	font-weight: 600;
-	margin: 10px 0 5px;
-}
-dd {
-	font-size: 1rem;
-}
-.bold {
-	font-weight: bold;
-	color: $grey-dark;
-}
-strong {
-	color: $grey-dark;
-}
+	a[target="_blank"]:before {
+		margin-right: 3px;
+	}
+	dt {
+		font-weight: 600;
+		margin: 10px 0 5px;
+	}
+	dd {
+		font-size: 1rem;
+	}
+	.bold, strong {
+		font-weight: bold;
+		color: $grey-dark;
+	}
+	code {
+		background: $grey-light;
+		color: $brand-color;
+		display: inline-block;
+		padding: 0 0.2rem;
+	}
+	pre, code {
+		font-family: 'Inconsolata', monospace;
+		font-size: 1rem;
+	}
+	figure.highlight {
+		margin: 0
+	}
+	pre {
+	  tab-size: 2;
+	  background: $grey-light;
+	  margin: 1rem 0;
+	  overflow-x: scroll;
+	  padding: 1em 2em;
+	  border-left: 5px solid $brand-color;
+	}
 
-code {
-	background: $grey-light;
-	color: $brand-color;
-	display: inline-block;
-	padding: 0 0.2rem;
-}
-pre, code {
-	font-family: 'Inconsolata', monospace;
-	font-size: 1rem;
-}
-figure.highlight {
-	margin: 0
-}
-pre {
-  tab-size: 2;
-  background: $grey-light;
-  margin: 1rem 0;
-  overflow-x: scroll;
-  padding: 1em 2em;
-  border-left: 5px solid $brand-color;
-}
-
-.cp_embed_wrapper {//This div contains codepen snippets
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
-
+	.cp_embed_wrapper {//This div contains codepen snippets
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 
 //HEADER
 	.site-header {
-		a:link, a:visited, a:hover, a:active {
+		font-size: 1rem;
+		a {
 			text-decoration: none;
-			color: inherit;
+		}
+		address {
+			font-style: normal;
+		}
+		abbr {
+			text-decoration: none;
 		}
 	}
-	address abbr[title] {
-		text-decoration: none;
-	}
-	@media (max-width: 400px){
+	@media(min-width: 900px){//900 up
 		.site-header {
-			.name {
-				padding-bottom: 0;
+			&:before {
+				content: '1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 10\A 11\A 12\A 13\A 14\A 15\A 16\A 17\A 18\A 19\A 20\A 21\A 22\A 23\A 24\A 25\A 26\A 27\A 28\A 29\A 30\A 31\A 32\A 33\A 34';
+				position: absolute;
+		    top: 10px;
+		    height: 100%;
+		    width: 1px;
+		    left: -23px;
+		    font-size: 0.9em;
 			}
-			.logo, .nickname {
+			position: fixed;
+	    top: 0;
+	    left: 2.5%;
+	    width: 30%;
+	    height: 100vh;
+	    display: flex;
+	    align-items: center;
+	    > div {
+	    	padding-right: 1rem;
+	    }
+			* {
+				color: #dedede;
+				font: 1em/1.125 'Source Sans Pro', sans-serif;
+				word-wrap: break-word;
+			}
+			.home-link, .logo, .nickname, .resume, .social, a{
+				display: block;
+			}
+			.logo {
+				margin: auto;
+				background-image: url(/assets/pngbg.png);
+			}
+			.nickname {
+				text-align: center;
+			}
+			i, img {
 				display: none;
 			}
+			.nickname, .resume, a {
+				margin-bottom: 5px;
+			}
+			.resume, .social {
+				//margin-left: 10px;
+			}
 		}
 	}
-	@media (max-width: 900px){
+	@media(min-width: 1126px){
 		.site-header {
+			left: 5%;
+			width: 25%;
+		}
+	}
+	@media(max-width: 900px){//900 down
+		.site-header {
+			padding: 5px 3vw;
 			background: #fff;
-			.header-content {
-				padding: 5px 0;
-			}
 			.logo {
 				max-width: 60px;
 				margin-right: 10px;
 			}
-			h1 {
-				margin: 0;
-				font-size: 1.2em;
-				padding-bottom: 10px;
+			a {
+				color: $grey-medium;
 			}
 			.nickname {
-				padding-bottom: 5px;
-				font-size: 0.9em;
+				font-size: 1.2em;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+				color: $grey-dark;
 			}
-			.social a {
-				margin-right: 10px;
+			.title {
+				font: 1em/1.1 'Source Sans Pro', sans-serif;
+				margin: 0;
 			}
-		}
-	}
-	@media (min-width: 900px){
-		.header-content {
-			position: fixed;
-			width: 25vw;
-			text-align: center;
-			padding-top: 60px;
-			.logo, .name, .nickname, .presentation, .social {
-				padding-right: 1rem;
+			.nickname, .title {
+				margin-right: 15px;
 			}
-			.logo {
-				margin: auto;
+			.social {
+				a {
+					display: inline-block;
+					margin-right: 10px;
+					vertical-align: top;
+				}
+				.name {
+					display: none;
+				}
+				i {
+					font-size: 20px;
+				}
 			}
-			.presentation {
-				text-align: justify;
-			}
-			
 		}
 	}
 
@@ -176,10 +219,9 @@ pre {
 		li {
 			display: inline-block;
 			margin-right: 10px;
-			font-size: 0.9em;
 			font-weight: bold;
 			&.active {
-				border-bottom: 3px solid $brand-color;
+				border-bottom: 4px solid $brand-color;
 			}
 		}
 		a:link, a:visited, a:hover, a:active {
@@ -187,7 +229,7 @@ pre {
 			color: $grey-dark;
 		}
 	}
-	@media (max-width: 900px){
+	@media(max-width: 900px){//900 down
 		nav {
 			ul {
 				background: #fff;
@@ -195,7 +237,7 @@ pre {
 			}
 		}
 	}
-	@media (min-width: 900px){
+	@media(min-width: 900px){//900 up
 		nav {
 			background: #fff;
 			padding-left: 1rem;
@@ -203,43 +245,52 @@ pre {
 		}
 	}
 
-//MAIN CONTENT
+//MAIN
 	main {
-		font-size: 18px;
-		padding-bottom: 2rem;
+		background: #fff;
+		padding-left: 1rem;
+		min-height: 100vh;
 	}
-	@media (max-width: 900px){
+	@media(max-width: 900px){
 		main {
-			background: #fff;
-			padding: 0 1em 1em;
-		}
-	}
-	@media (min-width: 900px){
-		main {
-			padding-left: 1rem;
 			padding-right: 1rem;
-			background: #fff
 		}
 	}
 
-//POST
+//POSTS
 	.post {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(3, auto);
-		p {
-			font-size: 18px;
-		}
-		footer {
-			grid-row: 1 / 2;
-		}
 		&.excerpt {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, auto);
+			border-bottom: 1px solid #f5f5f5;
+	    margin-bottom: 2rem;
+	    padding-bottom: 1rem;
+	    position: relative;
+	    &:after {
+	    	content: "\f109";
+		    font-family: "Font Awesome 5 Free";
+		    font-weight: bold;
+		    position: absolute;
+		    left: calc(50% - 11.25px);
+		    bottom: -12px;
+		    background: #fff;
+		    padding: 0 1px;
+		    color: $grey-light;
+	    }
+			footer {
+				grid-row: 1 / 2;
+				
+			}
 			h2 {
+				margin: 0;
+			}
+			.excerpt {
 				margin-bottom: 0;
 			}
 		}
 		.post-meta {
-			margin-bottom: 5px;
+			margin-bottom: 0;
 			font-weight: 300;
 			font-size: 0.85rem;
 			a, a:hover, a:focus {
@@ -251,7 +302,7 @@ pre {
 				position: relative;
 				&:after {
 					content: '';
-			    background-color: $grey-light;
+			    background-color: $brand-color;
 			    border-radius: 50%;
 			    width: 5px;
 			    height: 5px;
@@ -260,39 +311,6 @@ pre {
 			    top: calc(50% - 2px);
 			    right: 5px;
 				}
-			}
-		}
-		.post-title {
-			margin-top: 0;
-		}
-		header {
-			grid-row: 2 / 3;
-			h2 {
-				margin-top: 0;
-				a, a:hover, a:focus {
-					color: $grey-dark;
-					text-decoration: none;
-				}
-			}
-		}
-		.excerpt {
-			grid-row: 3 / 4;
-			p:last-of-type {
-				margin-bottom: 0;
-			}
-		}
-		&.excerpt {
-			border-bottom: 1px solid $grey-light;
-			margin-bottom: 2rem;
-			padding-bottom: 1rem;
-			&:last-of-type {
-				border-bottom: none;
-			}
-		}
-		.read-more {
-			a, a:hover, a:focus {
-				color: $brand-color;
-				font-weight: 700;
 			}
 		}
 		.minutes {
@@ -305,9 +323,12 @@ pre {
 				font-size: .7rem;
 			}
 		}
+		.post-title {
+			margin-top: 0;
+		}
 	}
 
-//ANNOTATIONS PAGE
+//NOTES
 	.notes {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -336,6 +357,11 @@ pre {
 			box-shadow: 0px 0px 7px 1px rgba(209,207,209,1);
 		}
 	}
+	@media(max-width: 480px){//480 down
+		.notes {
+			grid-template-columns: 1fr;
+		}
+	}
 	.note {
 		article {
 			position: relative;
@@ -345,7 +371,7 @@ pre {
 			padding-bottom: 15px;
 			margin-bottom: 15px;
 		}
-		article:after {
+		article:not(:last-of-type):after {
 			content: "\f109";
 	    font-family: "Font Awesome 5 Free";
 	    font-weight: bold;
@@ -354,7 +380,7 @@ pre {
 	    bottom: -12px;
 	    background: #fff;
 	    padding: 0 1px;
-	    color: #d5d5d5;
+	    color: $grey-light;
 		}
 		h2 {
 			margin-bottom: 0;
