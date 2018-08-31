@@ -139,7 +139,11 @@ type: note
 			<dt><code>&lt;section&gt;</code></dt>
 			<dd>Similar to <code>&lt;article&gt;</code> but its more for grouping a single part of the page that constitutes one single piece of functionality (e.g. a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a heading (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>...). You can place diferent sections inside articles or different articles inside sections</dd>
 			<dt><code>&lt;aside&gt;</code></dt>
-			<dd>Contents contet that isn't directly related to the main content but can provide additional information indirectly related to it (glossary, entries, author bio, related links etc)</dd>
+			<dd>Contents contet that isn't directly related to the main content but can provide additional information indirectly related to it (glossary, entries, author bio, related links etc). It could be removed without affecting a user's understanding of the main content.
+				<p>
+					The <code>&lt;aside&gt;</code> element describe content related to its parent so for example if an aside is placed inside an article, the content is related to that article, but if placed outside an article it means its related to the entire page</code>		
+				</p>
+			</dd>
 			<dt><code>&lt;header&gt;</code></dt>
 			<dd>Represents a group of introductory content. If it's a child of the body, it defines the global header of a webpage, if it's a child of an article or section it defines a specific header for that section.</dd>
 			<dt><code>&lt;nav&gt;</code></dt>
