@@ -61,7 +61,7 @@
 		color: $grey-dark;
 	}
 	p a, li a, dd a {
-		font-size: 0.9rem;
+		font-size: 0.8em;
 		color: $brand-color;
 	}
 	a[target="_blank"]:before {
@@ -71,6 +71,12 @@
 	  font-size: 0.8em;
 	  display: inline-block;
 	  margin-right: 1px;
+	}
+	h1 a[target="_blank"]:before,
+	h2 a[target="_blank"]:before,
+	h3 a[target="_blank"]:before,
+	h4 a[target="_blank"]:before {
+		font-size: 0.6em;
 	}
 	p, li, dd {
 		a[target="_blank"]:before {
@@ -85,7 +91,7 @@
 		margin: 10px 0 5px;
 	}
 	dd {
-		font-size: 1rem;
+		font-size: 0.95em;
 	}
 	.bold, strong {
 		font-weight: bold;
@@ -93,13 +99,13 @@
 	}
 	code {
 		background: $grey-light;
-		color: $brand-color;
+		color: #029c7e;
 		display: inline-block;
 		padding: 0 0.2rem;
 	}
 	pre, code {
-		font-family: 'Inconsolata', monospace;
-		font-size: 1rem;
+		font-family: 'Share Tech Mono', monospace;
+		font-size: 0.9em;
 	}
 	figure.highlight {
 		margin: 0
@@ -117,6 +123,96 @@
 		margin-top: 1em;
 		margin-bottom: 1em;
 	}
+
+	.link-list a {
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	.tip {
+		font-size: 1.25em;
+		font-style: italic;
+		padding-left: 1em;
+		border-left: 3px solid $brand-color;
+	}
+	
+	//Togable
+		.toggle {
+			dt {
+				display: flex;
+    		justify-content: space-between;
+				font-size: 0.9em;
+				border-bottom: 5px solid $brand-color;
+				padding: 0.3em;
+				&.collapsed + dd {
+					display: none;
+				}
+				.course {
+					margin-right: 15px;
+				}
+			}
+			.expand {
+				margin-right: 15px;
+				cursor: pointer;
+				font-size: 0.9em;
+				&:before {
+					content: "Show less";
+				}
+				&:after {
+					content: "\f0d8";
+			    font-family: "Font Awesome 5 Free";
+			    font-weight: bold;
+			    margin-left: 3px;
+				}
+			}
+			.collapsed .expand {
+				&:before {
+					content: "Show more";
+				}
+				&:after {
+					content: "\f0d7";
+				}
+			}
+			.progress:after {
+				content: '%';
+			}
+			ul {
+				list-style: none;
+				padding-left: 0;
+				li {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 10px;
+				}
+			}
+			li span {
+				float: right;
+			}
+		}
+		
+		/*
+		.toggle {
+			.progress, .expand	{
+				float: right;
+			}
+			.expand {
+				margin-right: 10px;
+				font-weight: normal;
+			}
+			dt {
+				cursor: pointer;
+				border-bottom: 5px solid $brand-color;
+				padding: 0.3em;
+			}
+			dd {
+				-webkit-transition: all 2s;
+    		transition: all 2s;
+			}
+			.collapsed + dd {
+				display: none;
+			}
+		}
+		*/
 
 //HEADER
 	.site-header {
@@ -389,7 +485,7 @@
 	    padding: 0 1px;
 	    color: $grey-light;
 		}
-		h2 {
+		.branded-title {
 			margin-bottom: 0;
 			background: $brand-color;
 			color: #fff;

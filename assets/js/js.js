@@ -17,7 +17,6 @@ $('.title .close-open')[0].getClientRects();
 	});
 
 	function testfit(scrolled){
-		console.log('loaded')
 		$('.site-header .social').show();
 		$('.title .close-open').show();
 
@@ -30,3 +29,40 @@ $('.title .close-open')[0].getClientRects();
 			}
 		}
 	}
+
+	$('.toggle .expand').click(function(){
+		var dt = $(this).closest('dt');
+		var toggleBlock  = $(this).closest('.toggle');
+		if($(dt).hasClass('collapsed')){
+			$.each($(toggleBlock).find('dt'), function(i,v){
+				$(v).addClass('collapsed')
+			})
+			$(dt).toggleClass('collapsed');
+		}else{
+			$(dt).toggleClass('collapsed');
+		}
+	})
+	$.each($('.curriculum dt .progress'), function(i,v){
+		var steps = $(v).closest('dt').next().find('li');
+		var totalSteps = steps.length;
+		var totalProgress = 0;
+		$.each(steps, function(i,v){
+			var stepProgress = parseFloat($(v).find('.progress')[0].innerText);
+			totalProgress += stepProgress;
+		})
+		totalProgress /= totalSteps;
+		
+		$(v)[0].innerText = totalProgress.toFixed(2);
+	})
+
+	//$('.toggle dt').click(function(){
+	//	if($(this).hasClass('collapsed')){
+	//		var parent = $(this).parent();
+	//		$.each($(parent).find('dt'), function(i,v){
+	//			$(v).addClass('collapsed')
+	//		})
+	//		$(this).next().toggleClass('hidden');
+	//	}else{
+	//		$(this).next().toggleClass('hidden');
+	//	}
+	//})
